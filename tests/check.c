@@ -6,11 +6,11 @@
 /*   By: romannbroque <rbroque@student.42.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 11:08:07 by romannbroque      #+#    #+#             */
-/*   Updated: 2022/08/30 12:47:45 by screw            ###   ########.fr       */
+/*   Updated: 2022/08/31 09:13:06 by screw            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 #include <check.h> 
 
 START_TEST(test_simple1)

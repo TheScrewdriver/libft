@@ -6,7 +6,7 @@
 #    By: romannbroque <rbroque@student.42.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/13 10:49:20 by romannbroque      #+#    #+#              #
-#    Updated: 2022/08/30 15:19:00 by screw            ###   ########.fr        #
+#    Updated: 2022/08/31 09:48:37 by screw            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,10 +26,9 @@ OBJS += $(PATH_OBJS)/*.o
 
 ########## INCLUDES
 
-INCLUDES += /usr/include
+CHECK_INCLUDES += /usr/include
+INCLUDES += ../includes/
 
-HEADER += ../libft.h
-HEADER += check.h
 LIB += /usr/lib/aarch64-linux-gnu/libcheck.a
 
 vpath %.h $(INCLUDES)
@@ -57,11 +56,11 @@ endif
 all: $(NAME)
 
 $(NAME): $(CHECK_OBJS) $(OBJS)
-	$(CC) $(CFLAGS) $^ -L $(LIB) $(LINKS) -o $@ -I $(INCLUDES)
+	$(CC) $(CFLAGS) $^ -L $(LIB) $(LINKS) -o $@ -I $(INCLUDES) -I $(CHECK_INCLUDES)
 	@echo $(NAME) COMPILED !
 
 $(CHECK_OBJS):
-	$(CC) $(CFLAGS) -c $(CHECK_SRCS) -o $(CHECK_OBJS)
+	$(CC) $(CFLAGS) -c $(CHECK_SRCS) -o $(CHECK_OBJS) -I $(INCLUDES) -I $(CHECK_INCLUDES)
 
 clean:
 	$(RM) -R $(PATH_OBJS)
