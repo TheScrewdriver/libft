@@ -6,7 +6,7 @@
 #    By: romannbroque <rbroque@student.42.fr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/13 10:49:20 by romannbroque      #+#    #+#              #
-#    Updated: 2022/08/31 09:48:37 by screw            ###   ########.fr        #
+#    Updated: 2022/08/31 10:08:50 by screw            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,20 +14,23 @@ NAME = exe
 
 ########## SRCS
 
+PATH_SRCS += srcs/
+
 CHECK_SRCS += check.c
 
 ########## OBJS
 
 PATH_OBJS += ../objs
+PATH_CHECK_OBJS += objs
 
-CHECK_OBJS += $(patsubst %.c, $(PATH_OBJS)/%.o, $(CHECK_SRCS))
+CHECK_OBJS += $(patsubst %.c, $(PATH_CHECK_OBJS)/%.o, $(CHECK_SRCS))
 OBJS += $(CHECK_OBJS)
 OBJS += $(PATH_OBJS)/*.o
 
 ########## INCLUDES
 
 CHECK_INCLUDES += /usr/include
-INCLUDES += ../includes/
+INCLUDES += ../includes
 
 LIB += /usr/lib/aarch64-linux-gnu/libcheck.a
 
@@ -59,11 +62,12 @@ $(NAME): $(CHECK_OBJS) $(OBJS)
 	$(CC) $(CFLAGS) $^ -L $(LIB) $(LINKS) -o $@ -I $(INCLUDES) -I $(CHECK_INCLUDES)
 	@echo $(NAME) COMPILED !
 
-$(CHECK_OBJS):
-	$(CC) $(CFLAGS) -c $(CHECK_SRCS) -o $(CHECK_OBJS) -I $(INCLUDES) -I $(CHECK_INCLUDES)
+$(CHECK_OBJS): $(PATH_CHECK_OBJS)/%.o: $(PATH_SRCS)/%.c
+	mkdir -p $(PATH_CHECK_OBJS)
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES) -I $(CHECK_INCLUDES)
 
 clean:
-	$(RM) -R $(PATH_OBJS)
+	$(RM) -R $(PATH_CHECK_OBJS)
 
 fclean: clean
 	$(RM) $(NAME)

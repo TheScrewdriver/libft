@@ -6,7 +6,7 @@
 #    By: screw <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/30 12:20:18 by screw             #+#    #+#              #
-#    Updated: 2022/08/31 09:48:44 by screw            ###   ########.fr        #
+#    Updated: 2022/08/31 10:09:12 by screw            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,11 +54,12 @@ $(OBJS): $(PATH_OBJS)/%.o: $(PATH_SRCS)/%.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
 test: $(LIB_NAME)
-	$(MAKE) -C $(CHECK_FOLDER)
+	$(MAKE) -sC $(CHECK_FOLDER)
+	@echo "<--------- TEST ---------->\n\n"
 	$(CHECK_FOLDER)/run_tests.sh $(CHECK_FOLDER)/exe
 
 clean:
-	$(RM) -R $(OBJS)
+	$(RM) -R $(PATH_OBJS)
 
 fclean: clean
 	$(RM) -R $(LIB_NAME)
@@ -68,3 +69,4 @@ re: fclean
 	$(MAKE)
 
 .PHONY: all test clean fclean re
+.SILENT: test
