@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.test.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: romannbroque <rbroque@student.42.fr>       +#+  +:+       +#+        */
+/*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/13 11:08:07 by romannbroque      #+#    #+#             */
-/*   Updated: 2022/08/31 09:13:06 by screw            ###   ########.fr       */
+/*   Created: 2022/08/31 12:09:02 by rbroque           #+#    #+#             */
+/*   Updated: 2022/08/31 12:09:04 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <check.h> 
+#include "libft.test.h"
 
 START_TEST(test_simple1)
 {
@@ -38,20 +37,4 @@ Suite	*ft_strlen_suite(void)
 	suite_add_tcase(s, tc_core);
 
 	return (s);
-}
-
-int	main(void)
-{
-	int		not_failed;
-	Suite	*s;
-	SRunner	*runner;
-
-	not_failed = 0;
-	s = ft_strlen_suite();
-	runner = srunner_create(s);
-	
-	srunner_run_all(runner, CK_NORMAL);
-	not_failed = srunner_ntests_failed(runner);
-	srunner_free(runner);
-	return (not_failed == 0) ? EXIT_SUCCESS : EXIT_FAILURE;
 }

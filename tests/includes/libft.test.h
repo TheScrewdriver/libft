@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   libft.test.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: screw <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/30 12:39:15 by screw             #+#    #+#             */
-/*   Updated: 2022/08/30 12:40:24 by screw            ###   ########.fr       */
+/*   Created: 2022/08/31 12:03:04 by rbroque           #+#    #+#             */
+/*   Updated: 2022/08/31 12:04:24 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_TEST_H
+# define LIBFT_TEST_H
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	len;
+# include "libft.h"
+# include <check.h> 
 
-	len = 0;
-	while (str[len] != '\0')
-		++len;
-	return (len);
-}
+Suite	*ft_strlen_suite(void);
 
-void	ft_putstr(const char *str)
-{
-	write(STDOUT_FILENO, str, ft_strlen(str));
-}
+#endif

@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 10:15:48 by rbroque           #+#    #+#             */
-/*   Updated: 2022/08/31 10:15:49 by rbroque          ###   ########.fr       */
+/*   Created: 2022/08/31 12:09:12 by rbroque           #+#    #+#             */
+/*   Updated: 2022/08/31 12:09:14 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.test.h"
 
-#include <unistd.h>
-#include <stdlib.h>
+int	main(void)
+{
+	int		not_failed;
+	Suite	*s;
+	SRunner	*runner;
 
-size_t	ft_strlen(const char *str);
-void	ft_putstr(const char *str);
-
-#endif
+	not_failed = 0;
+	s = ft_strlen_suite();
+	runner = srunner_create(s);
+	
+	srunner_run_all(runner, CK_NORMAL);
+	not_failed = srunner_ntests_failed(runner);
+	srunner_free(runner);
+	return (not_failed == 0) ? EXIT_SUCCESS : EXIT_FAILURE;
+}

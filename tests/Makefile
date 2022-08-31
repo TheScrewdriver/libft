@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: romannbroque <rbroque@student.42.fr>       +#+  +:+       +#+         #
+#    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/13 10:49:20 by romannbroque      #+#    #+#              #
-#    Updated: 2022/08/31 10:08:50 by screw            ###   ########.fr        #
+#    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
+#    Updated: 2022/08/31 12:08:03 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ NAME = exe
 
 PATH_SRCS += srcs/
 
-CHECK_SRCS += check.c
+CHECK_SRCS += ft_strlen.test.c
+CHECK_SRCS += main.c
 
 ########## OBJS
 
@@ -30,11 +31,13 @@ OBJS += $(PATH_OBJS)/*.o
 ########## INCLUDES
 
 CHECK_INCLUDES += /usr/include
+TEST_INCLUDES += includes/
 INCLUDES += ../includes
 
 LIB += /usr/lib/aarch64-linux-gnu/libcheck.a
 
 vpath %.h $(INCLUDES)
+vpath %test.h $(TEST_INCLUDES)
 
 ########## COMPILER
 
@@ -64,7 +67,7 @@ $(NAME): $(CHECK_OBJS) $(OBJS)
 
 $(CHECK_OBJS): $(PATH_CHECK_OBJS)/%.o: $(PATH_SRCS)/%.c
 	mkdir -p $(PATH_CHECK_OBJS)
-	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES) -I $(CHECK_INCLUDES)
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES) -I $(CHECK_INCLUDES) -I $(TEST_INCLUDES)
 
 clean:
 	$(RM) -R $(PATH_CHECK_OBJS)

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: screw <marvin@42.fr>                       +#+  +:+       +#+         #
+#    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/08/30 12:20:18 by screw             #+#    #+#              #
-#    Updated: 2022/08/31 10:09:12 by screw            ###   ########.fr        #
+#    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
+#    Updated: 2022/08/31 10:17:53 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ LIB_NAME = libft.a
 
 PATH_SRCS += srcs/
 
-SRCS += ft_putstr.c
+SRCS += ft_strlen.c
 
 ### OBJS
 
