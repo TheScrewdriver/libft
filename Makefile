@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/08/31 10:17:53 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/01 12:52:50 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,13 +17,11 @@ LIB_NAME = libft.a
 ### SRCS
 
 PATH_SRCS += srcs/
-
 SRCS += ft_strlen.c
 
 ### OBJS
 
 PATH_OBJS = objs
-
 OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
 
 ### CHECK_FOLDER
@@ -55,7 +53,6 @@ $(OBJS): $(PATH_OBJS)/%.o: $(PATH_SRCS)/%.c $(HEADER)
 
 test: $(LIB_NAME)
 	$(MAKE) -sC $(CHECK_FOLDER)
-	@echo "<--------- TEST ---------->\n\n"
 	$(CHECK_FOLDER)/run_tests.sh $(CHECK_FOLDER)/exe
 
 clean:

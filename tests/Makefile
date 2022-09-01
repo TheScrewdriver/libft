@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/08/31 12:08:03 by rbroque          ###   ########.fr        #
+#    Updated: 2022/08/31 13:15:46 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,6 @@ vpath %test.h $(TEST_INCLUDES)
 CC = clang
 
 CFLAGS += -Wall
-CFLAGS += -Werror
 CFLAGS += -Wextra
 
 LINKS += -lcheck
