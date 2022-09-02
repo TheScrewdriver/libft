@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_ctype.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 10:17:27 by rbroque           #+#    #+#             */
-/*   Updated: 2022/08/31 10:17:38 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/02 12:50:23 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/02 19:13:40 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_CTYPE_H
+# define FT_CTYPE_H
 
-size_t	ft_strlen(const char *str)
-{
-	size_t	len;
+int	ft_isalpha(int c);
+int	ft_islower(int c);
+int	ft_isupper(int c);
 
-	len = 0;
-	while (str[len] != '\0')
-		++len;
-	return (len);
-}
+#endif

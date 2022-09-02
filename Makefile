@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/01 12:52:50 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/02 19:14:31 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,20 @@ LIB_NAME = libft.a
 ### SRCS
 
 PATH_SRCS += srcs/
+PATH_SRCS += srcs/strings
+PATH_SRCS += srcs/ctype
+
+# strings
+
 SRCS += ft_strlen.c
+
+# ctype
+
+SRCS += ft_islower.c
+SRCS += ft_isupper.c
+SRCS += ft_isalpha.c
+
+vpath %.c $(PATH_SRCS)
 
 ### OBJS
 
@@ -47,7 +60,7 @@ all: $(LIB_NAME)
 $(LIB_NAME): $(OBJS)
 	ar rc $(LIB_NAME) $(OBJS)
 
-$(OBJS): $(PATH_OBJS)/%.o: $(PATH_SRCS)/%.c $(HEADER)
+$(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
 	mkdir -p $(PATH_OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 

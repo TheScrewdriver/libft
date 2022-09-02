@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 10:15:48 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/02 12:52:52 by rbroque          ###   ########.fr       */
+/*   Created: 2022/08/31 10:17:27 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/02 12:53:31 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-#include "ft_ctype.h"
 #include "ft_strings.h"
 
-#endif
+size_t	ft_strlen(const char *str)
+{
+	size_t	len;
+
+	len = 0;
+	while (str[len] != '\0')
+		++len;
+	return (len);
+}

@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 10:15:48 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/02 12:52:52 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/02 19:10:20 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/02 19:12:31 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <ft_ctype.h>
 
-#include "ft_ctype.h"
-#include "ft_strings.h"
-
-#endif
+int ft_isupper(int c)
+{
+	return (c >= 'A' && c <= 'Z');
+}
