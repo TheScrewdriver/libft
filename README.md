@@ -3,7 +3,11 @@ A C-library of usual functions
 
 ## Library content
 
-### libc
+### Part 1
+
+#### libc
+
+##### ctype
 
 * ft_islower
 * ft_isupper
@@ -12,19 +16,23 @@ A C-library of usual functions
 * ft_isalnum
 * ft_isascii
 * ft_isprint
+
+##### strings
+
 * ft_strlen
-* ft_memset
-* ft_bzero
-* ft_memcpy
-* ft_memmove
 * ft_strlcpy
 * ft_strlcat
-* ft_toupper
-* ft_tolower
 * ft_strchr
 * ft_strrchr 
 * ft_strncmp
-* ft_memchr
-* ft_memcmp
 * ft_strnstr
+* ft_memset
+* ft_memcpy
+* ft_memmove
+* ft_memcmp
+* ft_memchr
+
+* ft_bzero
+* ft_toupper
+* ft_tolower
 * ft_atoi

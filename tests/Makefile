@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/08/31 13:15:46 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/03 00:19:32 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ NAME = exe
 PATH_SRCS += srcs/
 
 CHECK_SRCS += ft_strlen.test.c
+CHECK_SRCS += ft_isalpha.test.c
 CHECK_SRCS += main.c
 
 ########## OBJS
