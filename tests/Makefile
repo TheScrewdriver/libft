@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/03 00:19:32 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/03 13:22:22 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,22 @@ NAME = exe
 ########## SRCS
 
 PATH_SRCS += srcs/
+PATH_SRCS += srcs/ctype
+PATH_SRCS += srcs/strings
+
+# ctype
+
+CHECK_SRCS += ft_isalpha.test.c
+
+# strings
 
 CHECK_SRCS += ft_strlen.test.c
-CHECK_SRCS += ft_isalpha.test.c
+
+# main
+
 CHECK_SRCS += main.c
+
+vpath %.c $(PATH_SRCS)
 
 ########## OBJS
 
@@ -65,7 +77,7 @@ $(NAME): $(CHECK_OBJS) $(OBJS)
 	$(CC) $(CFLAGS) $^ -L $(LIB) $(LINKS) -o $@ -I $(INCLUDES) -I $(CHECK_INCLUDES)
 	@echo $(NAME) COMPILED !
 
-$(CHECK_OBJS): $(PATH_CHECK_OBJS)/%.o: $(PATH_SRCS)/%.c
+$(CHECK_OBJS): $(PATH_CHECK_OBJS)/%.o: %.c
 	mkdir -p $(PATH_CHECK_OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES) -I $(CHECK_INCLUDES) -I $(TEST_INCLUDES)
 

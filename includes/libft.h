@@ -6,14 +6,14 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 10:15:48 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/02 12:52:52 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/03 13:24:27 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include "ft_ctype.h"
-#include "ft_strings.h"
+# include "ft_ctype.h"
+# include "ft_strings.h"
 
 #endif
