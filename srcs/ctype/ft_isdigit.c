@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ctype.h                                         :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 12:50:23 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/04 09:55:45 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/04 09:49:46 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/04 09:57:47 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_CTYPE_H
-# define FT_CTYPE_H
+#include "ft_ctype.h"
 
-int	ft_isalpha(int c);
-int	ft_islower(int c);
-int	ft_isupper(int c);
-int	ft_isdigit(int c);
-
-#endif
+int	ft_isdigit(int c)
+{
+	return (c >= '0' && c <= '9');
+}

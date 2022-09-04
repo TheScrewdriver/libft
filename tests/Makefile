@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/03 15:46:59 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/04 09:54:40 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ PATH_SRCS += srcs/strings
 CHECK_SRCS += ft_islower.test.c
 CHECK_SRCS += ft_isupper.test.c
 CHECK_SRCS += ft_isalpha.test.c
+CHECK_SRCS += ft_isdigit.test.c
 
 # strings
 

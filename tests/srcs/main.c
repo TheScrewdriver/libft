@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 12:09:12 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/03 15:48:03 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/04 09:53:13 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,10 @@ int	main(void)
 	size_t			i;
 	static Suite	*(*suite[NBOF_SUITE])(void) = {
 		ft_strlen_suite,
+		ft_isalpha_suite,
 		ft_isupper_suite,
 		ft_islower_suite,
-		ft_isalpha_suite};
+		ft_isdigit_suite};
 
 	nbof_failed = 0;
 	i = 0;
