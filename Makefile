@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/02 21:49:41 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/03 15:40:48 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,10 +70,11 @@ test: $(LIB_NAME)
 
 clean:
 	$(RM) -R $(PATH_OBJS)
+	$(MAKE) -sC $(CHECK_FOLDER) clean
 
 fclean: clean
 	$(RM) -R $(LIB_NAME)
-	$(MAKE) -C $(CHECK_FOLDER) fclean
+	$(MAKE) -sC $(CHECK_FOLDER) fclean
 
 re: fclean
 	$(MAKE)

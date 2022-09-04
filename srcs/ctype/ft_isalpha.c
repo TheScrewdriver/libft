@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 14:49:34 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/02 19:13:59 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/04 09:44:44 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalpha(int c)
 {
-	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c >= 'z'));
+	return (ft_islower(c) || ft_isupper(c));
 }

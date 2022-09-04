@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.test.c                                  :+:      :+:    :+:   */
+/*   ft_isupper.test.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/03 00:15:21 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/04 09:45:03 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/03 15:43:06 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/04 09:39:25 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ START_TEST(zero)
 {
 	const int c = 0;
 
-	ck_assert_int_eq(are_same_sign(ft_isalpha(c), isalpha(c)), 1);
+	ck_assert_int_eq(are_same_sign(ft_isupper(c), isupper(c)), 1);
 }
 END_TEST
 
@@ -29,7 +29,15 @@ START_TEST(positive_nb1)
 {
 	const int c = 25;
 
-	ck_assert_int_eq(are_same_sign(ft_isalpha(c), isalpha(c)), 1);
+	ck_assert_int_eq(are_same_sign(ft_isupper(c), isupper(c)), 1);
+}
+END_TEST
+
+START_TEST(positive_nb2)
+{
+	const int c = 211256;
+
+	ck_assert_int_eq(are_same_sign(ft_isupper(c), isupper(c)), 1);
 }
 END_TEST
 
@@ -37,7 +45,7 @@ START_TEST(negative_nb)
 {
 	const int c = -54;
 
-	ck_assert_int_eq(are_same_sign(ft_isalpha(c), isalpha(c)), 1);
+	ck_assert_int_eq(are_same_sign(ft_isupper(c), isupper(c)), 1);
 }
 END_TEST
 
@@ -45,7 +53,7 @@ START_TEST(uppercase1)
 {
 	const int c = 'A';
 
-	ck_assert_int_eq(are_same_sign(ft_isalpha(c), isalpha(c)), 1);
+	ck_assert_int_eq(are_same_sign(ft_isupper(c), isupper(c)), 1);
 }
 END_TEST
 
@@ -53,7 +61,7 @@ START_TEST(uppercase2)
 {
 	const int c = 'M';
 
-	ck_assert_int_eq(are_same_sign(ft_isalpha(c), isalpha(c)), 1);
+	ck_assert_int_eq(are_same_sign(ft_isupper(c), isupper(c)), 1);
 }
 END_TEST
 
@@ -61,7 +69,7 @@ START_TEST(lowercase)
 {
 	const int c = 'p';
 
-	ck_assert_int_eq(are_same_sign(ft_isalpha(c), isalpha(c)), 1);
+	ck_assert_int_eq(are_same_sign(ft_isupper(c), isupper(c)), 1);
 }
 END_TEST
 
@@ -69,7 +77,7 @@ START_TEST(uchar_min)
 {
 	const int c = -UCHAR_MAX;
 
-	ck_assert_int_eq(are_same_sign(ft_isalpha(c), isalpha(c)), 1);
+	ck_assert_int_eq(are_same_sign(ft_isupper(c), isupper(c)), 1);
 }
 END_TEST
 
@@ -77,7 +85,7 @@ START_TEST(uchar_max)
 {
 	const int c = UCHAR_MAX;
 
-	ck_assert_int_eq(are_same_sign(ft_isalpha(c), isalpha(c)), 1);
+	ck_assert_int_eq(are_same_sign(ft_isupper(c), isupper(c)), 1);
 }
 END_TEST
 
@@ -85,20 +93,21 @@ START_TEST(eof)
 {
 	const int c = EOF;
 
-	ck_assert_int_eq(are_same_sign(ft_isalpha(c), isalpha(c)), 1);
+	ck_assert_int_eq(are_same_sign(ft_isupper(c), isupper(c)), 1);
 }
 END_TEST
 
-Suite	*ft_isalpha_suite(void)
+Suite	*ft_isupper_suite(void)
 {
 	Suite	*s;
 	TCase	*new;
 
-	s = suite_create("FT_ISALPHA");
+	s = suite_create("FT_ISUPPER");
 	new = tcase_create("Result");
 
 	tcase_add_test(new, zero);
 	tcase_add_test(new, positive_nb1);
+	tcase_add_test(new, positive_nb2);
 	tcase_add_test(new, negative_nb);
 	tcase_add_test(new, uppercase1);
 	tcase_add_test(new, uppercase2);

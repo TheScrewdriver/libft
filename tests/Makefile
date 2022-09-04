@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/03 13:22:22 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/03 15:46:59 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,8 @@ PATH_SRCS += srcs/strings
 
 # ctype
 
+CHECK_SRCS += ft_islower.test.c
+CHECK_SRCS += ft_isupper.test.c
 CHECK_SRCS += ft_isalpha.test.c
 
 # strings
@@ -34,12 +36,9 @@ vpath %.c $(PATH_SRCS)
 
 ########## OBJS
 
-PATH_OBJS += ../objs
 PATH_CHECK_OBJS += objs
 
 CHECK_OBJS += $(patsubst %.c, $(PATH_CHECK_OBJS)/%.o, $(CHECK_SRCS))
-OBJS += $(CHECK_OBJS)
-OBJS += $(PATH_OBJS)/*.o
 
 ########## INCLUDES
 
@@ -47,7 +46,10 @@ CHECK_INCLUDES += /usr/include
 TEST_INCLUDES += includes/
 INCLUDES += ../includes
 
+########## INCLUDES
+
 LIB += /usr/lib/aarch64-linux-gnu/libcheck.a
+LIB += ../libft.a
 
 vpath %.h $(INCLUDES)
 vpath %test.h $(TEST_INCLUDES)
@@ -73,7 +75,7 @@ endif
 
 all: $(NAME)
 
-$(NAME): $(CHECK_OBJS) $(OBJS)
+$(NAME): $(CHECK_OBJS)
 	$(CC) $(CFLAGS) $^ -L $(LIB) $(LINKS) -o $@ -I $(INCLUDES) -I $(CHECK_INCLUDES)
 	@echo $(NAME) COMPILED !
 
