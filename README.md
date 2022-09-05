@@ -3,9 +3,7 @@ A C-library of usual functions
 
 ## Library content
 
-### Part 1
-
-#### libc
+### Part 1 - libc
 
 ##### ctype
 
