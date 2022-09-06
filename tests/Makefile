@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/05 17:21:37 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/05 20:01:29 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ CHECK_SRCS += ft_isalpha.test.c
 CHECK_SRCS += ft_isdigit.test.c
 CHECK_SRCS += ft_isalnum.test.c
 CHECK_SRCS += ft_isascii.test.c
+CHECK_SRCS += ft_isprint.test.c
 
 # strings
 

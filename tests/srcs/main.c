@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 12:09:12 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/05 17:24:10 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/05 20:03:21 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ int	main(void)
 		ft_islower_suite,
 		ft_isdigit_suite,
 		ft_isalnum_suite,
-		ft_isascii_suite};
+		ft_isascii_suite,
+		ft_isprint_suite};
 
 	nbof_failed = 0;
 	i = 0;

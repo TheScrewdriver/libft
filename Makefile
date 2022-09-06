@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/05 17:20:48 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/06 11:23:45 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRCS += ft_isalpha.c
 SRCS += ft_isdigit.c
 SRCS += ft_isalnum.c
 SRCS += ft_isascii.c
+SRCS += ft_isprint.c
 
 vpath %.c $(PATH_SRCS)
 
@@ -55,6 +56,10 @@ CC = clang
 CFLAGS += -Wall
 CFLAGS += -Werror
 CFLAGS += -Wextra
+
+ifeq ($(everything), true)
+	CFLAGS = -Weverything
+endif
 
 ### RULES
 
