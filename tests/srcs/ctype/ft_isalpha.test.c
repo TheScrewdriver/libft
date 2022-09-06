@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/03 00:15:21 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/04 09:45:03 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/06 14:57:32 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,14 @@ START_TEST(uchar_max)
 }
 END_TEST
 
+START_TEST(beyond_uchar_max)
+{
+	const int c = UCHAR_MAX + 2;
+
+	ck_assert_int_eq(are_same_sign(ft_isalpha(c), isalpha(c)), 1);
+}
+END_TEST
+
 START_TEST(eof)
 {
 	const int c = EOF;
@@ -105,6 +113,7 @@ Suite	*ft_isalpha_suite(void)
 	tcase_add_test(new, lowercase);
 	tcase_add_test(new, uchar_min);
 	tcase_add_test(new, uchar_max);
+	tcase_add_test(new, beyond_uchar_max);
 	tcase_add_test(new, eof);
 
 	suite_add_tcase(s, new);
