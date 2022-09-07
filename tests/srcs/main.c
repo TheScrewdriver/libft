@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 12:09:12 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/05 20:03:21 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/07 19:11:51 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	main(void)
 	size_t			i;
 	static Suite	*(*suite[NBOF_SUITE])(void) = {
 		ft_strlen_suite,
+		ft_memset_suite,
 		ft_isalpha_suite,
 		ft_isupper_suite,
 		ft_islower_suite,
