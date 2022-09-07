@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/06 11:23:45 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/07 18:52:28 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ PATH_SRCS += srcs/ctype
 # strings
 
 SRCS += ft_strlen.c
+SRCS += ft_memset.c
 
 # ctype
 

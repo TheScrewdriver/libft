@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strings.h                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 12:51:40 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/07 18:52:15 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/07 18:50:46 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/07 18:53:19 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STRINGS_H
-# define FT_STRINGS_H
+#include "ft_strings.h"
 
-# include <stdlib.h>
+void	*ft_memset(void *s, int c, size_t n)
+{
+	size_t	i;
 
-size_t	ft_strlen(const char *str);
-void	*ft_memset(void *set, int c, size_t n);
-
-#endif
+	i = 0;
+	while (i < n)
+	{
+		((int *)s)[i] = c;
+		++i;
+	}
+	return (s);
+}
