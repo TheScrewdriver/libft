@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 12:03:04 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/08 15:26:47 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/08 18:24:34 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "libft.h"
 # include <check.h> 
 # include <limits.h> 
+# include <signal.h> 
 # include <stdbool.h> 
 # include <stdio.h> 
 # include <stdint.h>
