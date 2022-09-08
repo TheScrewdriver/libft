@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 18:50:46 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/07 18:53:19 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/08 15:23:13 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		((int *)s)[i] = c;
+		((uint8_t *)s)[i] = c;
 		++i;
 	}
 	return (s);
