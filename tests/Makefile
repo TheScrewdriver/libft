@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/08 18:41:14 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/08 19:03:28 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ CHECK_SRCS += ft_isprint.test.c
 CHECK_SRCS += ft_strlen.test.c
 CHECK_SRCS += ft_memset.test.c
 CHECK_SRCS += ft_bzero.test.c
+CHECK_SRCS += ft_memcpy.test.c
 
 # main
 

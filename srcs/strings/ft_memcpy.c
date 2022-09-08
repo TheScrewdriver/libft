@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strings.h                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 12:51:40 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/08 18:59:02 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/08 18:59:17 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/08 19:01:40 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STRINGS_H
-# define FT_STRINGS_H
+#include "ft_strings.h"
 
-# include <stdlib.h>
-# include <stdint.h>
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	size_t	i;
 
-size_t	ft_strlen(const char *str);
-void	*ft_memset(void *set, int c, size_t n);
-void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-
-#endif
+	i = 0;
+	while (i < n)
+	{
+		((uint8_t *)dest)[i] = ((uint8_t *)src)[i];
+		++i;
+	}
+	return (dest);
+}
