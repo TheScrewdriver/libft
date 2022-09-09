@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 12:03:04 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/08 19:03:44 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/09 10:49:23 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,13 @@
 # include <string.h> 
 # include <ctype.h>
 
-# define NBOF_SUITE 11
+# define NBOF_SUITE 12
 
 Suite	*ft_strlen_suite(void);
 Suite	*ft_memset_suite(void);
 Suite	*ft_bzero_suite(void);
 Suite	*ft_memcpy_suite(void);
+Suite	*ft_memmove_suite(void);
 
 Suite	*ft_isalpha_suite(void);
 Suite	*ft_isupper_suite(void);
