@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/09 10:49:08 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/10 12:45:43 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,8 @@ CHECK_SRCS += ft_memset.test.c
 CHECK_SRCS += ft_bzero.test.c
 CHECK_SRCS += ft_memcpy.test.c
 CHECK_SRCS += ft_memmove.test.c
+CHECK_SRCS += ft_strlcpy.test.c
+CHECK_SRCS += ft_strlcat.test.c
 
 # main
 
@@ -70,6 +72,7 @@ CFLAGS += -Wall
 CFLAGS += -Wextra
 
 LINKS += -lcheck
+LINKS += -lbsd
 LINKS += -lsubunit
 LINKS += -lm
 LINKS += -lpthread

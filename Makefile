@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/09 10:48:35 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/10 12:18:14 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,8 @@ SRCS += ft_memset.c
 SRCS += ft_bzero.c
 SRCS += ft_memcpy.c
 SRCS += ft_memmove.c
+SRCS += ft_strlcpy.c
+SRCS += ft_strlcat.c
 
 # ctype
 
