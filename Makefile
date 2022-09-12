@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/12 10:59:44 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/12 11:25:09 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRCS += ft_strchr.c
 SRCS += ft_strrchr.c
 SRCS += ft_strncmp.c
 SRCS += ft_memchr.c
+SRCS += ft_memcmp.c
 
 # ctype
 
