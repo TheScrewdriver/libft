@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/12 15:33:32 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/12 16:46:58 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,7 @@ CHECK_SRCS += ft_strnstr.test.c
 # stdlib
 
 CHECK_SRCS += ft_atoi.test.c
+CHECK_SRCS += ft_calloc.test.c
 
 # main
 

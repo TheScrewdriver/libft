@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stdlib.h                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 15:04:27 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/12 19:22:44 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/12 16:13:54 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/12 19:23:00 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STDLIB_H
-# define FT_STDLIB_H
+#include "ft_stdlib.h"
 
-# include <limits.h>
-# include <stdint.h>
-# include <stdlib.h>
-# include <stdbool.h>
-# include "ft_strings.h"
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	const size_t	total_size = nmemb * size;
+	void			*ptr;
 
-# define SPACE ' '
-# define FIRST_WHITESPACE 9 
-# define LAST_WHITESPACE 13
-
-int		ft_atoi(const char *str);
-void	*ft_calloc(size_t nmemb, size_t size);
-
-#endif
+	ptr = malloc(total_size);
+	if (ptr != NULL)
+		ft_bzero(ptr, total_size);
+	return (ptr);
+}

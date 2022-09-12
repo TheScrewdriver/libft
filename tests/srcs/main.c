@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 12:09:12 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/12 15:32:58 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/12 16:47:39 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ int	main(void)
 		ft_isprint_suite,
 		ft_toupper_suite,
 		ft_tolower_suite,
-		ft_atoi_suite};
+		ft_atoi_suite,
+		ft_calloc_suite};
 
 	nbof_failed = 0;
 	i = 0;

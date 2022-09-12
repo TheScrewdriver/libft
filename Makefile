@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/12 15:08:18 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/12 16:44:47 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ SRCS += ft_tolower.c
 # stdlib
 
 SRCS += ft_atoi.c
+SRCS += ft_calloc.c
 
 vpath %.c $(PATH_SRCS)
 
