@@ -29,8 +29,10 @@ A C-library of usual functions
 * ft_memmove
 * ft_memcmp
 * ft_memchr
-
 * ft_bzero
 * ft_toupper
 * ft_tolower
+
+##### stdlib
+
 * ft_atoi
