@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_stdlib.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 10:15:48 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/12 15:36:17 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/12 15:04:27 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/12 15:57:20 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_STDLIB_H
+# define FT_STDLIB_H
 
-# include "ft_ctype.h"
-# include "ft_strings.h"
-# include "ft_stdlib.h"
+# include <stdbool.h>
+# include <stdint.h>
+
+# define SPACE ' '
+# define FIRST_WHITESPACE 9 
+# define LAST_WHITESPACE 13
+
+int	ft_atoi(const char *str);
 
 #endif

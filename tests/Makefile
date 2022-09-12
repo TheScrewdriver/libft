@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/12 11:50:53 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/12 15:33:32 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ NAME = exe
 PATH_SRCS += srcs/
 PATH_SRCS += srcs/ctype
 PATH_SRCS += srcs/strings
+PATH_SRCS += srcs/stdlib
 
 # ctype
 
@@ -45,6 +46,10 @@ CHECK_SRCS += ft_strncmp.test.c
 CHECK_SRCS += ft_memchr.test.c
 CHECK_SRCS += ft_memcmp.test.c
 CHECK_SRCS += ft_strnstr.test.c
+
+# stdlib
+
+CHECK_SRCS += ft_atoi.test.c
 
 # main
 

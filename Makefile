@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/12 11:50:12 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/12 15:08:18 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ LIB_NAME = libft.a
 PATH_SRCS += srcs/
 PATH_SRCS += srcs/strings
 PATH_SRCS += srcs/ctype
+PATH_SRCS += srcs/stdlib
 
 # strings
 
@@ -47,6 +48,10 @@ SRCS += ft_isascii.c
 SRCS += ft_isprint.c
 SRCS += ft_toupper.c
 SRCS += ft_tolower.c
+
+# stdlib
+
+SRCS += ft_atoi.c
 
 vpath %.c $(PATH_SRCS)
 
