@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/12 16:46:58 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/12 21:49:41 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ CHECK_SRCS += ft_strncmp.test.c
 CHECK_SRCS += ft_memchr.test.c
 CHECK_SRCS += ft_memcmp.test.c
 CHECK_SRCS += ft_strnstr.test.c
+CHECK_SRCS += ft_strdup.test.c
 
 # stdlib
 
