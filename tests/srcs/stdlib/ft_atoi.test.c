@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 15:29:12 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/12 15:52:13 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/12 16:11:42 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,22 @@ START_TEST(negative)
 }
 END_TEST
 
+START_TEST(int_max)
+{
+	const char *str = "2147483647";
+
+	ck_assert_int_eq(ft_atoi(str), atoi(str));
+}
+END_TEST
+
+START_TEST(int_min)
+{
+	const char *str = "-2147483648";
+
+	ck_assert_int_eq(ft_atoi(str), atoi(str));
+}
+END_TEST
+
 Suite	*ft_atoi_suite(void)
 {
 	Suite	*s;
@@ -74,6 +90,8 @@ Suite	*ft_atoi_suite(void)
 	tcase_add_test(new, spaces2);
 	tcase_add_test(new, spaces3);
 	tcase_add_test(new, negative);
+	tcase_add_test(new, int_max);
+	tcase_add_test(new, int_min);
 
 	suite_add_tcase(s, new);
 
