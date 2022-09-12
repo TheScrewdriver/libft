@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 11:01:30 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/12 11:15:10 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/12 11:18:39 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,20 @@ START_TEST(empty_string)
 }
 END_TEST
 
+START_TEST(null_size)
+{
+	char	*string = "123ssadlasdlasdllllllsad";
+	char	c = 'l';
+	size_t	size = 0;
+	char	*ptr;
+	char	*ft_ptr;
+
+	ptr = memchr(string, c, size);
+	ft_ptr = ft_memchr(string, c, size);
+	ck_assert_ptr_eq(ptr, ft_ptr);
+}
+END_TEST
+
 START_TEST(search_for_null_char)
 {
 	char	*string = "yolo";
@@ -62,6 +76,7 @@ Suite	*ft_memchr_suite(void)
 	new = tcase_create("Result");
 	tcase_add_test(new, simple_string);
 	tcase_add_test(new, empty_string);
+	tcase_add_test(new, null_size);
 	tcase_add_test(new, search_for_null_char);
 	suite_add_tcase(s, new);
 	return (s);
