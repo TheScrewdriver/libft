@@ -24,6 +24,7 @@ A C-library of usual functions
 * ft_strrchr 
 * ft_strncmp
 * ft_strnstr
+* ft_strdup
 * ft_memset
 * ft_memcpy
 * ft_memmove
@@ -36,3 +37,4 @@ A C-library of usual functions
 ##### stdlib
 
 * ft_atoi
+* ft_calloc
