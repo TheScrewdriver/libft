@@ -14,6 +14,8 @@ A C-library of usual functions
 * ft_isalnum
 * ft_isascii
 * ft_isprint
+* ft_toupper
+* ft_tolower
 
 ##### strings
 
@@ -31,8 +33,6 @@ A C-library of usual functions
 * ft_memcmp
 * ft_memchr
 * ft_bzero
-* ft_toupper
-* ft_tolower
 
 ##### stdlib
 
