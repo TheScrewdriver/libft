@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 15:03:56 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/12 16:02:43 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/13 00:09:13 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ static bool	is_whitespace(const char c)
 
 int	ft_atoi(const char *nptr)
 {
-	long	nb;
-	int8_t	sign;
+	unsigned int	nb;
+	int8_t			sign;
 
 	nb = 0;
 	sign = 1;

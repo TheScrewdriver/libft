@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/12 21:45:59 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/13 21:26:43 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,7 +87,7 @@ endif
 all: $(LIB_NAME)
 
 $(LIB_NAME): $(OBJS)
-	ar rc $(LIB_NAME) $(OBJS)
+	ar rcs $(LIB_NAME) $(OBJS)
 
 $(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
 	mkdir -p $(PATH_OBJS)
