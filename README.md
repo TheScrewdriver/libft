@@ -41,12 +41,12 @@ A C-library of usual functions
 
 ### Part 2 - Additional functions
 
-#### ft_substr
-> Allocate (with malloc(3)) and returns a substring from the original string.
-> This new string starts at the input index.
-> Returns NULL if allocation fails.
-
 #### ft_strjoin
 > Allocate (with malloc(3)) and returns a new string resulting from
 > the concatenation of two strings.
+> Returns NULL if allocation fails.
+
+#### ft_substr
+> Allocate (with malloc(3)) and returns a substring from the original string.
+> This new string starts at the input index.
 > Returns NULL if allocation fails.
