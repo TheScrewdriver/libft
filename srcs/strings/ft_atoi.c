@@ -1,18 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/08 18:39:06 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/08 18:40:15 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/12 15:03:56 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/14 15:32:11 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_strings.h"
 
-void	ft_bzero(void *s, size_t n)
+static bool	is_whitespace(const char c)
 {
-	ft_memset(s, 0, n);
+	return (c == SPACE || (FIRST_WHITESPACE <= c && c <= LAST_WHITESPACE));
+}
+
+int	ft_atoi(const char *nptr)
+{
+	long	nb;
+	size_t	i;
+
+	nb = 0;
+	while (is_whitespace(*nptr) == true)
+		++nptr;
+	i = 0;
+	if (nptr[0] == '-' || nptr[0] == '+')
+		++i;
+	while ('0' <= nptr[i] && nptr[i] <= '9')
+	{
+		nb = nb * 10 + (nptr[i] - '0');
+		++i;
+	}
+	if (nptr[0] == '-')
+		nb *= -1;
+	return ((int)nb);
 }

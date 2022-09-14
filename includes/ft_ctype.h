@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/02 12:50:23 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/11 12:09:45 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/14 15:23:37 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/14 15:31:39 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@
 # define LAST_PRINTABLE 126
 # define CASE_OFFSET 32
 
-int	ft_isalpha(int c);
-int	ft_islower(int c);
-int	ft_isupper(int c);
-int	ft_isdigit(int c);
 int	ft_isalnum(int c);
+int	ft_isalpha(int c);
 int	ft_isascii(int c);
+int	ft_isdigit(int c);
+int	ft_islower(int c);
 int	ft_isprint(int c);
-int	ft_toupper(int c);
+int	ft_isupper(int c);
 int	ft_tolower(int c);
+int	ft_toupper(int c);
 
 #endif

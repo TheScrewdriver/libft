@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/07 18:50:46 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/13 21:49:35 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/12 16:13:54 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/14 15:30:05 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_strings.h"
+#include "ft_memory.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t	i;
+	const size_t	total_size = nmemb * size;
+	void			*ptr;
 
-	i = 0;
-	while (i < n)
-	{
-		((uint8_t *)s)[i] = (uint8_t)c;
-		++i;
-	}
-	return (s);
+	ptr = malloc(total_size);
+	if (ptr != NULL)
+		ft_bzero(ptr, total_size);
+	return (ptr);
 }

@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 16:13:54 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/12 19:23:00 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/12 11:22:12 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/14 15:30:30 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stdlib.h"
+#include "ft_memory.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const size_t	total_size = nmemb * size;
-	void			*ptr;
+	size_t	i;
 
-	ptr = malloc(total_size);
-	if (ptr != NULL)
-		ft_bzero(ptr, total_size);
-	return (ptr);
+	i = 0;
+	while (i < n)
+	{
+		if (((uint8_t *)s1)[i] != ((uint8_t *)s2)[i])
+			return (((uint8_t *)s1)[i] - ((uint8_t *)s2)[i]);
+		++i;
+	}
+	return (0);
 }

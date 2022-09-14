@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 10:55:30 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/12 11:16:26 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/08 18:59:17 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/14 15:30:38 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_strings.h"
+#include "ft_memory.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
 	i = 0;
 	while (i < n)
 	{
-		if (((uint8_t *)s)[i] == c)
-			return ((void *)(s + i));
+		((uint8_t *)dest)[i] = ((const uint8_t *)src)[i];
 		++i;
 	}
-	return (NULL);
+	return (dest);
 }

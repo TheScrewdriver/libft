@@ -1,39 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 15:03:56 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/13 22:41:44 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/07 18:50:46 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/14 15:30:54 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_stdlib.h"
+#include "ft_memory.h"
 
-static bool	is_whitespace(const char c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	return (c == SPACE || (FIRST_WHITESPACE <= c && c <= LAST_WHITESPACE));
-}
-
-int	ft_atoi(const char *nptr)
-{
-	long	nb;
 	size_t	i;
 
-	nb = 0;
-	while (is_whitespace(*nptr) == true)
-		++nptr;
 	i = 0;
-	if (nptr[0] == '-' || nptr[0] == '+')
-		++i;
-	while ('0' <= nptr[i] && nptr[i] <= '9')
+	while (i < n)
 	{
-		nb = nb * 10 + (nptr[i] - '0');
+		((uint8_t *)s)[i] = (uint8_t)c;
 		++i;
 	}
-	if (nptr[0] == '-')
-		nb *= -1;
-	return ((int)nb);
+	return (s);
 }
