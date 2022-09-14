@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/14 16:11:55 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/14 17:38:41 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,9 @@ SRCS += ft_memset.c
 
 SRCS += ft_atoi.c
 SRCS += ft_strchr.c
+SRCS += ft_strcpy.c
 SRCS += ft_strdup.c
+SRCS += ft_strjoin.c
 SRCS += ft_strlcat.c
 SRCS += ft_strlcpy.c
 SRCS += ft_strlen.c

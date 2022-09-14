@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 12:03:04 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/14 16:14:28 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/14 17:48:56 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # include <string.h> 
 # include <ctype.h>
 
-# define NBOF_SUITE 26
+# define NBOF_SUITE 28
 
 //ctype
 Suite	*ft_isalnum_suite(void);
@@ -49,12 +49,14 @@ Suite	*ft_memset_suite(void);
 //strings
 Suite	*ft_atoi_suite(void);
 Suite	*ft_strchr_suite(void);
+Suite	*ft_strcpy_suite(void);
+Suite	*ft_strdup_suite(void);
+Suite	*ft_strjoin_suite(void);
 Suite	*ft_strlcat_suite(void);
 Suite	*ft_strlcpy_suite(void);
 Suite	*ft_strlen_suite(void);
 Suite	*ft_strncmp_suite(void);
 Suite	*ft_strnstr_suite(void);
-Suite	*ft_strdup_suite(void);
 Suite	*ft_strrchr_suite(void);
 Suite	*ft_substr_suite(void);
 
