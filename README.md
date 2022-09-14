@@ -26,6 +26,7 @@ A C-library of usual functions
 * ft_memmove
 * ft_memset
 * ft_strchr
+* ft_strcpy
 * ft_strdup
 * ft_strlen
 * ft_strlcat
