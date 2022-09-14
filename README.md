@@ -30,8 +30,9 @@ A C-library of usual functions
 * ft_strdup
 * ft_strlen
 * ft_strlcat
-* ft_strncmp
 * ft_strlcpy
+* ft_strncmp
+* ft_strndup
 * ft_strnstr
 * ft_strrchr 
 
