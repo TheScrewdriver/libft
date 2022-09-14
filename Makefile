@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/13 21:26:43 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/13 21:57:21 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,11 +75,14 @@ INCLUDES += includes/
 CC = clang
 
 CFLAGS += -Wall
-CFLAGS += -Werror
 CFLAGS += -Wextra
 
+ifneq ($(noerr), true)
+	CFLAGS += -Werror
+endif
+
 ifeq ($(everything), true)
-	CFLAGS = -Weverything
+	CFLAGS += -Weverything
 endif
 
 ### RULES
@@ -102,7 +105,7 @@ clean:
 	$(MAKE) -sC $(CHECK_FOLDER) clean
 
 fclean: clean
-	$(RM) -R $(LIB_NAME)
+	$(RM) $(LIB_NAME)
 	$(MAKE) -sC $(CHECK_FOLDER) fclean
 
 re: fclean

@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 15:03:56 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/13 00:09:13 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/13 22:41:44 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,21 @@ static bool	is_whitespace(const char c)
 
 int	ft_atoi(const char *nptr)
 {
-	unsigned int	nb;
-	int8_t			sign;
+	long	nb;
+	size_t	i;
 
 	nb = 0;
-	sign = 1;
 	while (is_whitespace(*nptr) == true)
 		++nptr;
-	if (*nptr == '-' || *nptr == '+')
+	i = 0;
+	if (nptr[0] == '-' || nptr[0] == '+')
+		++i;
+	while ('0' <= nptr[i] && nptr[i] <= '9')
 	{
-		if (*nptr == '-')
-			sign = -1;
-		++nptr;
+		nb = nb * 10 + (nptr[i] - '0');
+		++i;
 	}
-	while ('0' <= *nptr && *nptr <= '9')
-	{
-		nb = nb * 10 + (*nptr - '0');
-		++nptr;
-	}
-	return (nb * sign);
+	if (nptr[0] == '-')
+		nb *= -1;
+	return ((int)nb);
 }

@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 12:24:04 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/11 12:46:22 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/13 22:06:29 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
-	{
-		if (*s == c)
-			return ((char *)s);
+	while (*s != c && *s != '\0')
 		++s;
-	}
-	if (c == '\0')
+	if (*s == c)
 		return ((char *)s);
 	return (NULL);
 }
