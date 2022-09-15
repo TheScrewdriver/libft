@@ -35,7 +35,6 @@ A C-library of usual functions
 * ft_strndup
 * ft_strnstr
 * ft_strrchr
-* ft_strtrim
 
 ##### stdlib
 
@@ -44,17 +43,23 @@ A C-library of usual functions
 
 ### Part 2 - Additional functions
 
+#### ft_split
+> Allocates (with malloc(3)) and returns an array of strings obtained by
+> separating the input string with the input character used as the delimiter.
+> The resulting array is terminated with a NULL pointer.
+> Returns NULL if allocation fails.
+
 #### ft_strjoin
 > Allocates (with malloc(3)) and returns a new string resulting from
 > the concatenation of two strings.
 > Returns NULL if allocation fails.
 
-#### ft_substr
-> Allocates (with malloc(3)) and returns a substring from the original string.
-> This new string starts at the input index.
-> Returns NULL if allocation fails.
-
 #### ft_strtrim
 > Allocates (with malloc(3)) and returns a copy of the input string without
 > the set's characters at the beginning and at the end.
+> Returns NULL if allocation fails.
+
+#### ft_substr
+> Allocates (with malloc(3)) and returns a substring from the original string.
+> This new string starts at the input index.
 > Returns NULL if allocation fails.

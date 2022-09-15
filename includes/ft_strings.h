@@ -6,13 +6,14 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 12:51:40 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/14 18:49:13 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/15 17:29:20 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STRINGS_H
 # define FT_STRINGS_H
 
+# include <stdio.h>
 # include <stdlib.h>
 # include <stdint.h>
 # include <stdbool.h>
@@ -22,6 +23,7 @@
 # define LAST_WHITESPACE 13
 
 int		ft_atoi(const char *str);
+char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strcpy(char *dst, char *src);
 char	*ft_strdup(const char *s);
