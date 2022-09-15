@@ -43,6 +43,12 @@ A C-library of usual functions
 
 ### Part 2 - Additional functions
 
+#### ft_itoa
+> Allocates (with malloc(3)) and returns a string
+> representing the input integer.
+> Negative numbers are supported.
+> Returns NULL if allocation fails.
+
 #### ft_split
 > Allocates (with malloc(3)) and returns an array of strings obtained by
 > separating the input string with the input character used as the delimiter.
