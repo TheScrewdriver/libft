@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 18:52:18 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/14 19:04:09 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/15 14:07:33 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,19 @@ START_TEST(empty_set)
 }
 END_TEST
 
+START_TEST(little_set)
+{
+	char	*string1 = "ooooaaaaaoabuaaaaargero";
+	char	*set = "ao";
+	char	*expected_str = "buaaaaarger";
+	char	*trim;
+
+	trim = ft_strtrim(string1, set);
+	ck_assert_str_eq(expected_str, trim);
+	free(trim);
+}
+END_TEST
+
 Suite	*ft_strtrim_suite(void)
 {
 	Suite	*s;
@@ -89,6 +102,7 @@ Suite	*ft_strtrim_suite(void)
 	tcase_add_test(new, empty_string1);
 	tcase_add_test(new, empty_string2);
 	tcase_add_test(new, empty_set);
+	tcase_add_test(new, little_set);
 	suite_add_tcase(s, new);
 	return (s);
 }
