@@ -58,6 +58,9 @@ A C-library of usual functions
 #### [`ft_putendl_fd`](srcs/output/ft_putendl_fd.c)
 > Writes a string on the input file descriptor followed by a newline.
 
+#### [`ft_putnbr_fd`](srcs/output/ft_putnbr_fd.c)
+> Writes a integer on the input file descriptor.
+
 #### [`ft_putstr_fd`](srcs/output/ft_putstr_fd.c)
 > Writes a string on the input file descriptor.
 

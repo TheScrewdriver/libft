@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_output.h                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.test.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 15:24:14 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 22:04:53 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/16 22:09:44 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/16 22:10:08 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_OUTPUT_H
-# define FT_OUTPUT_H
+#include "libft.test.h"
 
-# include <unistd.h>
-# include "ft_strings.h"
+Suite	*ft_putnbr_fd_suite(void)
+{
+	Suite	*s;
+	TCase	*new;
 
-void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(char *s, int fd);
-
-#endif
+	s = suite_create("FT_PUTNBR_FD");
+	new = tcase_create("Result");
+	suite_add_tcase(s, new);
+	return (s);
+}
