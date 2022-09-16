@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 15:29:12 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 12:09:08 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/16 12:12:17 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,6 +83,7 @@ START_TEST(int_min)
 	ck_assert_int_eq(ft_atoi(str), atoi(str));
 }
 END_TEST
+
 Suite	*ft_atoi_suite(void)
 {
 	Suite	*s;
