@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/16 15:27:49 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/16 17:02:34 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ SRCS += ft_memset.c
 # output
 
 SRCS += ft_putchar_fd.c
+SRCS += ft_putstr_fd.c
 
 # strings
 

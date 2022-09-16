@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.test.c                               :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 15:30:23 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 17:05:39 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/16 17:03:05 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/16 17:04:15 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "ft_output.h"
 
-Suite	*ft_putchar_fd_suite(void)
+void	ft_putstr_fd(char *s, int fd)
 {
-	Suite	*s;
-	TCase	*new;
-
-	s = suite_create("FT_PUTCHAR_FD");
-	new = tcase_create("Result");
-	suite_add_tcase(s, new);
-	return (s);
+	if (s != NULL)
+		write(fd, s, ft_strlen(s) * sizeof(char));
 }
