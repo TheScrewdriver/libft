@@ -55,6 +55,12 @@ A C-library of usual functions
 > The resulting array is terminated with a NULL pointer.
 > Returns NULL if allocation fails.
 
+#### ft_striteri
+> Allocates (with malloc(3)) and returns a duplicate string each character
+> of which has been modified by the input function
+> (which takes as argument the input string and its index).
+> Returns NULL if the allocation fails.
+
 #### ft_strjoin
 > Allocates (with malloc(3)) and returns a new string resulting from
 > the concatenation of two strings.
