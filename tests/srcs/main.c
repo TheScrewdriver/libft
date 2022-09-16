@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 12:09:12 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 00:50:06 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/16 09:25:50 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int	main(void)
 		ft_strlcat_suite,
 		ft_strlcpy_suite,
 		ft_strlen_suite,
+		ft_strmapi_suite,
 		ft_strncmp_suite,
 		ft_strndup_suite,
 		ft_strnstr_suite,
