@@ -50,6 +50,10 @@ A C-library of usual functions
 > Returns NULL if allocation fails.
 
 #### ft_strmapi
+> Allocates (with malloc(3)) and returns a duplicate string each character
+> of which has been modified by the input function
+> (which takes as argument each character of the input string and its index).
+> Returns NULL if the allocation fails.
 
 #### ft_split
 > Allocates (with malloc(3)) and returns an array of strings obtained by
