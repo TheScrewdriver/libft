@@ -6,13 +6,13 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 18:52:18 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/15 14:07:33 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/16 14:21:13 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.test.h"
 
-START_TEST(same_strings)
+START_TEST(simple_string)
 {
 	char	*string1 = "            hello my name is Neo   ";
 	char	*set = "  ";
@@ -90,6 +90,43 @@ START_TEST(little_set)
 }
 END_TEST
 
+START_TEST(null_case1)
+{
+	char	*string1 = NULL;
+	char	*set = "ao";
+	char	*expected_str = NULL;
+	char	*trim;
+
+	trim = ft_strtrim(string1, set);
+	ck_assert_ptr_eq(expected_str, trim);
+}
+END_TEST
+
+START_TEST(null_case2)
+{
+	char	*string1 = NULL;
+	char	*set = NULL;
+	char	*expected_str = NULL;
+	char	*trim;
+
+	trim = ft_strtrim(string1, set);
+	ck_assert_ptr_eq(expected_str, trim);
+}
+END_TEST
+
+START_TEST(null_case3)
+{
+	char	*string1 = "ooooaaaaaoabuaaaaargero";
+	char	*set = NULL;
+	char	*expected_str = "ooooaaaaaoabuaaaaargero";
+	char	*trim;
+
+	trim = ft_strtrim(string1, set);
+	ck_assert_str_eq(expected_str, trim);
+	free(trim);
+}
+END_TEST
+
 Suite	*ft_strtrim_suite(void)
 {
 	Suite	*s;
@@ -97,12 +134,15 @@ Suite	*ft_strtrim_suite(void)
 
 	s = suite_create("FT_STRTRIM");
 	new = tcase_create("Result");
-	tcase_add_test(new, same_strings);
+	tcase_add_test(new, simple_string);
 	tcase_add_test(new, only_charset);
 	tcase_add_test(new, empty_string1);
 	tcase_add_test(new, empty_string2);
 	tcase_add_test(new, empty_set);
 	tcase_add_test(new, little_set);
+	tcase_add_test(new, null_case1);
+	tcase_add_test(new, null_case2);
+	tcase_add_test(new, null_case3);
 	suite_add_tcase(s, new);
 	return (s);
 }

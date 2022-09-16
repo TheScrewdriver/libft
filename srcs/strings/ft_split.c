@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:29:49 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 12:05:41 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/16 14:11:19 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,6 @@ static char	*get_word(const char **s, char c)
 	while (**s == c)
 		++(*s);
 	word = ft_strndup(*s, wordlen);
-	if (word != NULL)
-		word[wordlen] = '\0';
 	*s += wordlen;
 	return (word);
 }
