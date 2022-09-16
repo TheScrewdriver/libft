@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:29:49 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/15 22:44:00 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/16 12:05:41 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,6 @@ static size_t	count_words(char const *s, char c)
 	return (count + (is_word == true));
 }
 
-static void	skipchr(const char **s, char c)
-{
-	while (**s == c)
-		++*s;
-}
-
 static size_t	get_wordlen(const char *s, char c)
 {
 	size_t	wordlen;
@@ -57,29 +51,54 @@ static char	*get_word(const char **s, char c)
 	const size_t	wordlen = get_wordlen(*s, c);
 	char			*word;
 
-	skipchr(s, c);
+	while (**s == c)
+		++(*s);
 	word = ft_strndup(*s, wordlen);
-	word[wordlen] = '\0';
+	if (word != NULL)
+		word[wordlen] = '\0';
 	*s += wordlen;
 	return (word);
 }
 
+static void	free_strs(char **strs)
+{
+	size_t	i;
+
+	i = 0;
+	while (strs[i] != NULL)
+	{
+		free(strs[i]);
+		++i;
+	}
+	free(strs);
+}
+
+
 char	**ft_split(char const *s, char c)
 {
-	const size_t	nbof_words = count_words(s, c);
-	size_t			i;
-	char			**split;
+	size_t	nbof_words;
+	size_t	i;
+	char	**split;
 
+	if (s == NULL)
+		return (NULL);
+	nbof_words = count_words(s, c);
 	split = (char **)malloc((nbof_words + 1) * sizeof(char *));
 	if (split != NULL)
 	{
 		i = 0;
+		split[nbof_words] = NULL;
 		while (i < nbof_words)
 		{
 			split[i] = get_word(&s, c);
+			if (split[i] == NULL)
+			{
+				free_strs(split);
+				split = NULL;
+				break ;
+			}
 			++i;
 		}
-		split[nbof_words] = NULL;
 	}
 	return (split);
 }

@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 17:30:41 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/15 22:44:52 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/16 12:07:20 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,18 @@ START_TEST(empty_string3)
 }
 END_TEST
 
+START_TEST(null_case)
+{
+	char	*string = NULL;
+	char	set = 'a';
+	char	**expected_str = NULL;
+	char	**split;
+
+	split = ft_split(string, set);
+	ck_assert_ptr_eq(expected_str, split);
+}
+END_TEST
+
 Suite	*ft_split_suite(void)
 {
 	Suite	*s;
@@ -112,6 +124,7 @@ Suite	*ft_split_suite(void)
 	tcase_add_test(new, empty_string1);
 	tcase_add_test(new, empty_string2);
 	tcase_add_test(new, empty_string3);
+	tcase_add_test(new, null_case);
 	suite_add_tcase(s, new);
 	return (s);
 }
