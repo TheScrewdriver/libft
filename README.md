@@ -52,6 +52,9 @@ A C-library of usual functions
 > Negative numbers are supported.
 > Returns NULL if allocation fails.
 
+#### [`ft_putchar_fd`](srcs/output/ft_putchar_fd.c)
+> Writes a character on the input file descriptor.
+
 #### [`ft_split`](srcs/strings/ft_split.c)
 > Allocates (with malloc(3)) and returns an array of strings obtained by
 > separating the input string with the input character used as the delimiter.
