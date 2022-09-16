@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/16 10:16:28 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/16 15:27:49 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ LIB_NAME = libft.a
 PATH_SRCS += srcs/
 PATH_SRCS += srcs/ctype
 PATH_SRCS += srcs/memory
+PATH_SRCS += srcs/output
 PATH_SRCS += srcs/strings
 
 # ctype
@@ -42,6 +43,10 @@ SRCS += ft_memcmp.c
 SRCS += ft_memcpy.c
 SRCS += ft_memmove.c
 SRCS += ft_memset.c
+
+# output
+
+SRCS += ft_putchar_fd.c
 
 # strings
 

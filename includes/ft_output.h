@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_output.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 10:15:48 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 15:24:28 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/16 15:24:14 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/16 15:25:43 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_OUTPUT_H
+# define FT_OUTPUT_H
 
-# include "ft_ctype.h"
-# include "ft_memory.h"
-# include "ft_output.h"
-# include "ft_strings.h"
+# include <unistd.h>
+
+void	ft_putchar_fd(char c, int fd);
 
 #endif
