@@ -5,41 +5,44 @@ A C-library of usual functions
 
 ### Part 1 - libc
 
-##### ctype
+##### Functions from `<ctype.h>` library
 
-* ft_isalnum
-* ft_isalpha
-* ft_isascii
-* ft_isdigit
-* ft_islower
-* ft_isprint
-* ft_isupper
-* ft_tolower
-* ft_toupper
+* [`ft_isalnum`](srcs/ctype/ft_isalnum.c)
+* [`ft_isalpha`](srcs/ctype/ft_isalpha.c)
+* [`ft_isascii`](srcs/ctype/ft_isascii.c)
+* [`ft_isdigit`](srcs/ctype/ft_isdigit.c)
+* [`ft_islower`](srcs/ctype/ft_islower.c)
+* [`ft_isprint`](srcs/ctype/ft_isprint.c)
+* [`ft_isupper`](srcs/ctype/ft_isupper.c)
+* [`ft_tolower`](srcs/ctype/ft_tolower.c)
+* [`ft_toupper`](srcs/ctype/ft_toupper.c)
 
-##### strings
+##### Functions from `<stdlib.h>` library
 
-* ft_bzero
-* ft_memchr
-* ft_memcmp
-* ft_memcpy
-* ft_memmove
-* ft_memset
-* ft_strchr
-* ft_strcpy
-* ft_strdup
-* ft_strlen
-* ft_strlcat
-* ft_strlcpy
-* ft_strncmp
-* ft_strndup
-* ft_strnstr
-* ft_strrchr
+* [`ft_atoi`](srcs/strings/ft_atoi.c)
+* [`ft_calloc`](srcs/memory/ft_calloc.c)
 
-##### stdlib
+##### Functions from `<strings.h>` library
 
-* ft_atoi
-* ft_calloc
+* [`ft_bzero`](srcs/memory/ft_bzero.c)
+* [`ft_memchr`](srcs/memory/ft_memchr.c)
+* [`ft_memcmp`](srcs/memory/ft_memcmp.c)
+* [`ft_memcpy`](srcs/memory/ft_memcpy.c)
+* [`ft_memmove`](srcs/memory/ft_memmove.c)
+* [`ft_memset`](srcs/memory/ft_memset.c)
+
+##### Functions from `<string.h>` library
+
+* [`ft_strchr`](srcs/strings/ft_strchr.c)
+* [`ft_strcpy`](srcs/strings/ft_strcpy.c)
+* [`ft_strdup`](srcs/strings/ft_strdup.c)
+* [`ft_strlen`](srcs/strings/ft_strlen.c)
+* [`ft_strlcat`](srcs/strings/ft_strlcat.c)
+* [`ft_strlcpy`](srcs/strings/ft_strlcpy.c)
+* [`ft_strncmp`](srcs/strings/ft_strncmp.c)
+* [`ft_strndup`](srcs/strings/ft_strndup.c)
+* [`ft_strnstr`](srcs/strings/ft_strnstr.c)
+* [`ft_strrchr`](srcs/strings/ft_strrchr.c)
 
 ### Part 2 - Additional functions
 
