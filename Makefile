@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/16 22:05:28 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/17 00:27:47 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ LIB_NAME = libft.a
 
 PATH_SRCS += srcs/
 PATH_SRCS += srcs/ctype
+PATH_SRCS += srcs/list
 PATH_SRCS += srcs/memory
 PATH_SRCS += srcs/output
 PATH_SRCS += srcs/strings
@@ -33,6 +34,10 @@ SRCS += ft_isprint.c
 SRCS += ft_isupper.c
 SRCS += ft_tolower.c
 SRCS += ft_toupper.c
+
+# list
+
+SRCS += ft_lstnew_bonus.c
 
 # memory
 
