@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_output.h                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 15:24:14 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 21:48:04 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/16 21:44:48 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/16 21:45:51 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_OUTPUT_H
-# define FT_OUTPUT_H
+#include "ft_output.h"
 
-# include <unistd.h>
-# include "ft_strings.h"
-
-void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putstr_fd(char *s, int fd);
-
-#endif
+void	ft_putendl_fd(char *s, int fd)
+{
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n',fd);
+}

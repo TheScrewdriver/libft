@@ -55,6 +55,9 @@ A C-library of usual functions
 #### [`ft_putchar_fd`](srcs/output/ft_putchar_fd.c)
 > Writes a character on the input file descriptor.
 
+#### [`ft_putendl_fd`](srcs/output/ft_putchar_fd.c)
+> Writes a string on the input file descriptor followed by a newline.
+
 #### [`ft_putstr_fd`](srcs/output/ft_putstr_fd.c)
 > Writes a string on the input file descriptor.
 
