@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:29:49 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 14:11:19 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/16 14:27:10 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ static void	free_strs(char **strs)
 	}
 	free(strs);
 }
-
 
 char	**ft_split(char const *s, char c)
 {
