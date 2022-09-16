@@ -49,12 +49,6 @@ A C-library of usual functions
 > Negative numbers are supported.
 > Returns NULL if allocation fails.
 
-#### ft_strmapi
-> Allocates (with malloc(3)) and returns a duplicate string each character
-> of which has been modified by the input function
-> (which takes as argument each character of the input string and its index).
-> Returns NULL if the allocation fails.
-
 #### ft_split
 > Allocates (with malloc(3)) and returns an array of strings obtained by
 > separating the input string with the input character used as the delimiter.
@@ -65,6 +59,12 @@ A C-library of usual functions
 > Allocates (with malloc(3)) and returns a new string resulting from
 > the concatenation of two strings.
 > Returns NULL if allocation fails.
+
+#### ft_strmapi
+> Allocates (with malloc(3)) and returns a duplicate string each character
+> of which has been modified by the input function
+> (which takes as argument each character of the input string and its index).
+> Returns NULL if the allocation fails.
 
 #### ft_strtrim
 > Allocates (with malloc(3)) and returns a copy of the input string without
