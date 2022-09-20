@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 22:29:53 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/20 20:27:51 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/20 20:25:13 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/20 20:25:16 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
+#include "ft_list.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-
-typedef struct	s_list
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	void			*content;
-	struct s_list	*next;
-}				t_list;
-
-void	ft_lstadd_front(t_list **lst, t_list *new_lst);
-t_list	*ft_lstnew(void *content);
-
-#endif
+	if (lst != NULL && new != NULL)
+	{
+		new->next = *lst;
+		*lst = new;
+	}
+}

@@ -99,7 +99,10 @@ A C-library of usual functions
 
 ### Part 3 - BONUS
 
-#### [`ft_lstnew`](srcs/list/ft_lstnew.c)
+#### [`ft_lstadd`](srcs/list/ft_lstadd_front_bonus.c)
+> Add a new element to the beginning of the list.
+
+#### [`ft_lstnew`](srcs/list/ft_lstnew_bonus.c)
 > Allocates (with malloc(3)) and returns a list which takes
 > as content the input content.
 > Returns NULL if allocation fails.
