@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 22:29:53 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/20 23:38:55 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/20 23:39:07 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/21 00:30:36 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
+#include "ft_list.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-
-typedef struct s_list
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	void			*content;
-	struct s_list	*next;
-}				t_list;
+	t_list	*curr;
 
-void	ft_lstadd_back(t_list **lst, t_list *new_lst);
-void	ft_lstadd_front(t_list **lst, t_list *new_lst);
-t_list	*ft_lstlast(t_list *lst);
-t_list	*ft_lstnew(void *content);
-int		ft_lstsize(t_list *lst);
-
-#endif
+	if (lst != NULL)
+	{
+		if (*lst != NULL)
+		{
+			curr = *lst;
+			while (curr->next != NULL)
+				curr = curr->next;
+			curr->next = new;
+		}
+		else
+			*lst = new;
+	}
+}

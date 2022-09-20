@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/20 22:51:51 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/20 23:38:41 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ SRCS += ft_toupper.c
 
 # list
 
+SRCS_BONUS += ft_lstadd_back_bonus.c
 SRCS_BONUS += ft_lstadd_front_bonus.c
 SRCS_BONUS += ft_lstlast_bonus.c
 SRCS_BONUS += ft_lstnew_bonus.c

@@ -99,8 +99,11 @@ A C-library of usual functions
 
 ### Part 3 - BONUS
 
+#### [`ft_lstadd_back`](srcs/list/ft_lstadd_back_bonus.c)
+> Adds a new element at the end of the list.
+
 #### [`ft_lstadd_front`](srcs/list/ft_lstadd_front_bonus.c)
-> Add a new element to the beginning of the list.
+> Adds a new element to the beginning of the list.
 
 #### [`ft_lstlast`](srcs/list/ft_lstlast_bonus.c)
 > Returns the last element of the list.
