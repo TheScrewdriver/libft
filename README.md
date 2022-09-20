@@ -3,7 +3,7 @@ A C-library of usual functions
 
 ## Requirements
 
-To execute tests, the * [Check Unit Testing Frameworks for C](https://www.gnu.org/software/automake/) is required.
+To execute tests, the * ["Check Unit Testing Frameworks for C"](https://github.com/libcheck/check) is required.
 
 ## Using
 
