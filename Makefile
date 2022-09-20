@@ -6,13 +6,13 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/17 00:27:47 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/20 13:00:05 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 ### NAME
 
-LIB_NAME = libft.a
+NAME = libft.a
 
 ### SRCS
 
@@ -37,7 +37,7 @@ SRCS += ft_toupper.c
 
 # list
 
-SRCS += ft_lstnew_bonus.c
+BONUS_SRCS += ft_lstnew_bonus.c
 
 # memory
 
@@ -83,6 +83,9 @@ vpath %.c $(PATH_SRCS)
 
 PATH_OBJS = objs
 OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
+BONUS_OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(BONUS_SRCS))
+
+IS_BONUS = 0
 
 ### CHECK_FOLDER
 
@@ -109,29 +112,36 @@ endif
 
 ### RULES
 
-all: $(LIB_NAME)
+all: $(NAME)
 
-$(LIB_NAME): $(OBJS)
-	ar rcs $(LIB_NAME) $(OBJS)
+$(NAME): $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 $(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
 	mkdir -p $(PATH_OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
-test: $(LIB_NAME)
+$(BONUS_OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
+	mkdir -p $(PATH_OBJS)
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
+
+test: $(NAME)
 	$(MAKE) -sC $(CHECK_FOLDER)
 	$(CHECK_FOLDER)/run_tests.sh $(CHECK_FOLDER)/exe
+
+bonus: $(OBJS) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
 	$(RM) -R $(PATH_OBJS)
 	$(MAKE) -sC $(CHECK_FOLDER) clean
 
 fclean: clean
-	$(RM) $(LIB_NAME)
+	$(RM) $(NAME)
 	$(MAKE) -sC $(CHECK_FOLDER) fclean
 
 re: fclean
 	$(MAKE)
 
-.PHONY: all test clean fclean re
+.PHONY: all test bonus clean fclean re
 .SILENT: test

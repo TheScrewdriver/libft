@@ -96,3 +96,10 @@ A C-library of usual functions
 > Allocates (with malloc(3)) and returns a substring from the original string.
 > This new string starts at the input index.
 > Returns NULL if allocation fails.
+
+### Part 3 - BONUS
+
+#### [`ft_lstnew`](srcs/list/ft_lstnew.c)
+> Allocates (with malloc(3)) and returns a list which takes
+> as content the input content.
+> Returns NULL if allocation fails.

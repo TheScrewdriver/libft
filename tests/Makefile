@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/16 22:08:52 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/20 13:02:31 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,7 @@ NAME = exe
 
 PATH_SRCS += srcs/
 PATH_SRCS += srcs/ctype
+PATH_SRCS += srcs/list
 PATH_SRCS += srcs/memory
 PATH_SRCS += srcs/output
 PATH_SRCS += srcs/strings
@@ -31,6 +32,10 @@ CHECK_SRCS += ft_isprint.test.c
 CHECK_SRCS += ft_isupper.test.c
 CHECK_SRCS += ft_tolower.test.c
 CHECK_SRCS += ft_toupper.test.c
+
+# list
+
+CHECK_SRCS += ft_lstnew.test.c
 
 # memory
 
