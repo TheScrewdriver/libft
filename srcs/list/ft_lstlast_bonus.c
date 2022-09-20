@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 22:29:53 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/20 22:53:10 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/20 22:41:23 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/20 23:17:52 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_LIST_H
-# define FT_LIST_H
+#include "ft_list.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-
-typedef struct	s_list
+t_list	*ft_lstlast(t_list *lst)
 {
-	void			*content;
-	struct s_list	*next;
-}				t_list;
+	t_list	*last;
 
-void	ft_lstadd_front(t_list **lst, t_list *new_lst);
-t_list	*ft_lstlast(t_list *lst);
-t_list	*ft_lstnew(void *content);
-int		ft_lstsize(t_list *lst);
-
-#endif
+	last = lst;
+	while (lst != NULL)
+	{
+		last = lst;
+		lst = lst->next;
+	}
+	return (last);
+}

@@ -102,10 +102,13 @@ A C-library of usual functions
 #### [`ft_lstadd_front`](srcs/list/ft_lstadd_front_bonus.c)
 > Add a new element to the beginning of the list.
 
+#### [`ft_lstlast`](srcs/list/ft_lstlast_bonus.c)
+> Returns the last element of the list.
+
 #### [`ft_lstnew`](srcs/list/ft_lstnew_bonus.c)
 > Allocates (with malloc(3)) and returns a list which takes
 > as content the input content.
 > Returns NULL if allocation fails.
 
 #### [`ft_lstsize`](srcs/list/ft_lstsize_bonus.c)
-> Get the size of the list.
+> Returns the size of the list.
