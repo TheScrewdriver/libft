@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/20 20:27:59 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/20 22:02:03 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ SRCS += ft_toupper.c
 
 SRCS_BONUS += ft_lstadd_front_bonus.c
 SRCS_BONUS += ft_lstnew_bonus.c
+SRCS_BONUS += ft_lstsize_bonus.c
 
 # memory
 
