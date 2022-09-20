@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/20 13:00:05 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/20 14:31:23 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ SRCS += ft_toupper.c
 
 # list
 
-BONUS_SRCS += ft_lstnew_bonus.c
+SRCS_BONUS += ft_lstnew_bonus.c
 
 # memory
 
@@ -77,13 +77,16 @@ SRCS += ft_strrchr.c
 SRCS += ft_strtrim.c
 SRCS += ft_substr.c
 
+ifeq (bonus, $(findstring bonus, $(MAKECMDGOALS)))
+	SRCS += $(SRCS_BONUS)
+endif
+
 vpath %.c $(PATH_SRCS)
 
 ### OBJS
 
 PATH_OBJS = objs
 OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
-BONUS_OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(BONUS_SRCS))
 
 IS_BONUS = 0
 
@@ -114,23 +117,18 @@ endif
 
 all: $(NAME)
 
+bonus: $(NAME)
+
 $(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
+	ar rcs $@ $^
 
 $(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
-	mkdir -p $(PATH_OBJS)
-	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
-
-$(BONUS_OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
-	mkdir -p $(PATH_OBJS)
+	@mkdir -p $(PATH_OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
 test: $(NAME)
 	$(MAKE) -sC $(CHECK_FOLDER)
 	$(CHECK_FOLDER)/run_tests.sh $(CHECK_FOLDER)/exe
-
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
 	$(RM) -R $(PATH_OBJS)
@@ -144,4 +142,4 @@ re: fclean
 	$(MAKE)
 
 .PHONY: all test bonus clean fclean re
-.SILENT: test
+.SILENT: test bonus
