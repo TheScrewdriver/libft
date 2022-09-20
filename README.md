@@ -1,6 +1,24 @@
 # libft
 A C-library of usual functions
 
+## Requirements
+
+To execute tests, the "Check Unit Testing Frameworks for C" is required:
+
+## Using
+
+To compile the libft:
+
+	$ make
+
+(with bonus)
+
+	$ make bonus
+
+To execute tests:
+
+	$ make test
+
 ## Library content
 
 ### Part 1 - libc
