@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/20 23:38:41 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/21 01:37:09 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,6 +83,8 @@ SRCS += ft_substr.c
 
 ifeq (bonus, $(findstring bonus, $(MAKECMDGOALS)))
 	SRCS += $(SRCS_BONUS)
+else ifeq (test, $(findstring test, $(MAKECMDGOALS)))
+	SRCS += $(SRCS_BONUS)
 endif
 
 vpath %.c $(PATH_SRCS)
@@ -92,7 +94,6 @@ vpath %.c $(PATH_SRCS)
 PATH_OBJS = objs
 OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
 
-IS_BONUS = 0
 
 ### CHECK_FOLDER
 
@@ -131,7 +132,7 @@ $(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
 test: $(NAME)
-	$(MAKE) -sC $(CHECK_FOLDER)
+	$(MAKE) -sC $(CHECK_FOLDER) $(IS_BONUS)
 	$(CHECK_FOLDER)/run_tests.sh $(CHECK_FOLDER)/exe
 
 clean:

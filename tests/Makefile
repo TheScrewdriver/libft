@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/20 23:46:38 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/21 01:33:51 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -99,7 +99,7 @@ INCLUDES += ../includes
 
 ########## INCLUDES
 
-LIB += /usr/lib/aarch64-linux-gnu/libcheck.a
+LIB += /usr/lib/aarch64-linux-gnu/libcheck.a # Must be changed according with the OS
 LIB += ../libft.a
 
 vpath %.h $(INCLUDES)
@@ -126,6 +126,8 @@ endif
 ########## RULES
 
 all: $(NAME)
+
+bonus: $(NAME)
 
 $(NAME): $(CHECK_OBJS)
 	$(CC) $(CFLAGS) $^ -L $(LIB) $(LINKS) -o $@ -I $(INCLUDES) -I $(CHECK_INCLUDES)
