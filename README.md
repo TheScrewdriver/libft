@@ -99,7 +99,7 @@ A C-library of usual functions
 
 ### Part 3 - BONUS
 
-#### [`ft_lstadd`](srcs/list/ft_lstadd_front_bonus.c)
+#### [`ft_lstadd_front`](srcs/list/ft_lstadd_front_bonus.c)
 > Add a new element to the beginning of the list.
 
 #### [`ft_lstnew`](srcs/list/ft_lstnew_bonus.c)
