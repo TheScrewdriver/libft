@@ -4,6 +4,10 @@ A C-library of usual functions
 ## Requirements
 
 To execute tests, the [Check Unit Testing Frameworks for C](https://github.com/libcheck/check) is required.
+In addition, depending on your OS, you must change, in the test Makefile, the installation path of the Check library.
+For example, on Ubuntu LTS, it looks like this:
+
+![Screenshot](https://user-images.githubusercontent.com/58867296/191380453-93c01e8c-81e6-4583-b0b6-5ea8f6403d5d.png)
 
 ## Using
 
