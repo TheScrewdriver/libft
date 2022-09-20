@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 21:44:48 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 21:45:51 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/20 23:32:55 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	ft_putstr_fd(s, fd);
-	ft_putchar_fd('\n',fd);
+	ft_putchar_fd('\n', fd);
 }

@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 22:55:13 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/20 23:25:10 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/20 23:34:24 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ END_TEST
 
 START_TEST(null_head)
 {
-	int		content = 123;
 	t_list	*head;
 
 	head = NULL;
