@@ -3,21 +3,15 @@ A C-library of usual functions
 
 ## Requirements
 
-To execute tests, the "Check Unit Testing Frameworks for C" is required:
+To execute tests, the * [Check Unit Testing Frameworks for C](https://www.gnu.org/software/automake/) is required.
 
 ## Using
 
 To compile the libft:
 
 	$ make
-
-(with bonus)
-
-	$ make bonus
-
-To execute tests:
-
-	$ make test
+	$ make bonus // for bonus functions
+	$ make test  // for tests
 
 ## Library content
 
