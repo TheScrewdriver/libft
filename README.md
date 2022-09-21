@@ -121,6 +121,10 @@ To compile the libft:
 #### [`ft_lstadd_front`](srcs/list/ft_lstadd_front_bonus.c)
 > Adds a new element to the beginning of the list.
 
+#### [`ft_lstclear`](srcs/list/ft_lstclear_bonus.c)
+> Frees the list (each element of the list is freed thanks to [ft_lstdelone](srcs/list/ft_lstdelone_bonus.c)).
+> Then all element pointers are set to NULL.
+
 #### [`ft_lstdelone`](srcs/list/ft_lstdelone_bonus.c)
 > Frees the element's contents with del (passed as an argument),
 > then frees the element with free(3).
