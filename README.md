@@ -129,6 +129,9 @@ To compile the libft:
 > Frees the element's contents with del (passed as an argument),
 > then frees the element with free(3).
 
+#### [`ft_lstiter`](srcs/list/ft_lstiter_bonus.c)
+> Iterates over the list and applies the input function to each element.
+
 #### [`ft_lstlast`](srcs/list/ft_lstlast_bonus.c)
 > Returns the last element of the list.
 
