@@ -121,6 +121,10 @@ To compile the libft:
 #### [`ft_lstadd_front`](srcs/list/ft_lstadd_front_bonus.c)
 > Adds a new element to the beginning of the list.
 
+#### [`ft_lstdelone`](srcs/list/ft_lstdelone_bonus.c)
+> Frees the element's contents with del (passed as an argument),
+> then frees the element with free(3).
+
 #### [`ft_lstlast`](srcs/list/ft_lstlast_bonus.c)
 > Returns the last element of the list.
 
