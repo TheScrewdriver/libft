@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:29:49 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 14:27:10 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/22 15:05:07 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,9 @@ static char	*get_word(const char **s, char c)
 
 	while (**s == c)
 		++(*s);
-	word = ft_strndup(*s, wordlen);
+	word = (char *)malloc((wordlen + 1) * sizeof(char));
+	if (word != NULL)
+		ft_strlcpy(word, *s, wordlen + 1);
 	*s += wordlen;
 	return (word);
 }

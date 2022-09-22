@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:14:45 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/21 17:09:16 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/22 15:11:43 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,9 +27,7 @@ CHECK_SRCS += ft_isalnum.test.c
 CHECK_SRCS += ft_isalpha.test.c
 CHECK_SRCS += ft_isascii.test.c
 CHECK_SRCS += ft_isdigit.test.c
-CHECK_SRCS += ft_islower.test.c
 CHECK_SRCS += ft_isprint.test.c
-CHECK_SRCS += ft_isupper.test.c
 CHECK_SRCS += ft_tolower.test.c
 CHECK_SRCS += ft_toupper.test.c
 
@@ -68,7 +66,6 @@ CHECK_SRCS += ft_atoi.test.c
 CHECK_SRCS += ft_itoa.test.c
 CHECK_SRCS += ft_split.test.c
 CHECK_SRCS += ft_strchr.test.c
-CHECK_SRCS += ft_strcpy.test.c
 CHECK_SRCS += ft_strdup.test.c
 CHECK_SRCS += ft_striteri.test.c
 CHECK_SRCS += ft_strjoin.test.c
@@ -77,7 +74,6 @@ CHECK_SRCS += ft_strlcpy.test.c
 CHECK_SRCS += ft_strlen.test.c
 CHECK_SRCS += ft_strmapi.test.c
 CHECK_SRCS += ft_strncmp.test.c
-CHECK_SRCS += ft_strndup.test.c
 CHECK_SRCS += ft_strnstr.test.c
 CHECK_SRCS += ft_strrchr.test.c
 CHECK_SRCS += ft_strtrim.test.c

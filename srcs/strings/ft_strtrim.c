@@ -6,11 +6,21 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 18:32:23 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 14:18:12 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/22 15:08:22 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char	*ft_strndup(const char *str, size_t n)
+{
+	char	*new;
+
+	new = (char *)malloc((n + 1) * sizeof(char));
+	if (new != NULL)
+		ft_strlcpy(new, str, n + 1);
+	return (new);
+}
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

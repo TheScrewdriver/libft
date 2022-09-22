@@ -27,9 +27,7 @@ To compile the libft:
 * [`ft_isalpha`](srcs/ctype/ft_isalpha.c)
 * [`ft_isascii`](srcs/ctype/ft_isascii.c)
 * [`ft_isdigit`](srcs/ctype/ft_isdigit.c)
-* [`ft_islower`](srcs/ctype/ft_islower.c)
 * [`ft_isprint`](srcs/ctype/ft_isprint.c)
-* [`ft_isupper`](srcs/ctype/ft_isupper.c)
 * [`ft_tolower`](srcs/ctype/ft_tolower.c)
 * [`ft_toupper`](srcs/ctype/ft_toupper.c)
 
@@ -50,13 +48,11 @@ To compile the libft:
 ##### Functions from `<string.h>` library
 
 * [`ft_strchr`](srcs/strings/ft_strchr.c)
-* [`ft_strcpy`](srcs/strings/ft_strcpy.c)
 * [`ft_strdup`](srcs/strings/ft_strdup.c)
 * [`ft_strlen`](srcs/strings/ft_strlen.c)
 * [`ft_strlcat`](srcs/strings/ft_strlcat.c)
 * [`ft_strlcpy`](srcs/strings/ft_strlcpy.c)
 * [`ft_strncmp`](srcs/strings/ft_strncmp.c)
-* [`ft_strndup`](srcs/strings/ft_strndup.c)
 * [`ft_strnstr`](srcs/strings/ft_strnstr.c)
 * [`ft_strrchr`](srcs/strings/ft_strrchr.c)
 

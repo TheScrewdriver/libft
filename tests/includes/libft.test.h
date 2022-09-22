@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 12:03:04 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/21 17:09:36 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/22 15:11:21 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,14 @@
 # include <string.h> 
 # include <ctype.h>
 
-# define NBOF_SUITE 47
+# define NBOF_SUITE 43
 
 //ctype
 Suite	*ft_isalnum_suite(void);
 Suite	*ft_isalpha_suite(void);
 Suite	*ft_isascii_suite(void);
 Suite	*ft_isdigit_suite(void);
-Suite	*ft_islower_suite(void);
 Suite	*ft_isprint_suite(void);
-Suite	*ft_isupper_suite(void);
 Suite	*ft_tolower_suite(void);
 Suite	*ft_toupper_suite(void);
 
@@ -68,7 +66,6 @@ Suite	*ft_atoi_suite(void);
 Suite	*ft_itoa_suite(void);
 Suite	*ft_split_suite(void);
 Suite	*ft_strchr_suite(void);
-Suite	*ft_strcpy_suite(void);
 Suite	*ft_strdup_suite(void);
 Suite	*ft_striteri_suite(void);
 Suite	*ft_strjoin_suite(void);
@@ -77,7 +74,6 @@ Suite	*ft_strlcpy_suite(void);
 Suite	*ft_strlen_suite(void);
 Suite	*ft_strmapi_suite(void);
 Suite	*ft_strncmp_suite(void);
-Suite	*ft_strndup_suite(void);
 Suite	*ft_strnstr_suite(void);
 Suite	*ft_strrchr_suite(void);
 Suite	*ft_strtrim_suite(void);

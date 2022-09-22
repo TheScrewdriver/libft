@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/22 14:50:06 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/22 15:06:10 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,9 +29,7 @@ SRCS += ft_isalnum.c
 SRCS += ft_isalpha.c
 SRCS += ft_isascii.c
 SRCS += ft_isdigit.c
-SRCS += ft_islower.c
 SRCS += ft_isprint.c
-SRCS += ft_isupper.c
 SRCS += ft_tolower.c
 SRCS += ft_toupper.c
 
@@ -70,7 +68,6 @@ SRCS += ft_atoi.c
 SRCS += ft_itoa.c
 SRCS += ft_split.c
 SRCS += ft_strchr.c
-SRCS += ft_strcpy.c
 SRCS += ft_strdup.c
 SRCS += ft_striteri.c
 SRCS += ft_strjoin.c
@@ -79,7 +76,6 @@ SRCS += ft_strlcpy.c
 SRCS += ft_strlen.c
 SRCS += ft_strmapi.c
 SRCS += ft_strncmp.c
-SRCS += ft_strndup.c
 SRCS += ft_strnstr.c
 SRCS += ft_strrchr.c
 SRCS += ft_strtrim.c

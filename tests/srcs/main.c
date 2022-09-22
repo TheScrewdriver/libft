@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 12:09:12 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/21 17:09:49 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/22 15:13:20 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,7 @@ int	main(void)
 		ft_isalpha_suite,
 		ft_isascii_suite,
 		ft_isdigit_suite,
-		ft_islower_suite,
 		ft_isprint_suite,
-		ft_isupper_suite,
 		ft_lstadd_back_suite,
 		ft_lstadd_front_suite,
 		ft_lstclear_suite,
@@ -63,7 +61,6 @@ int	main(void)
 		ft_putstr_fd_suite,
 		ft_split_suite,
 		ft_strchr_suite,
-		ft_strcpy_suite,
 		ft_strdup_suite,
 		ft_striteri_suite,
 		ft_strjoin_suite,
@@ -72,7 +69,6 @@ int	main(void)
 		ft_strlen_suite,
 		ft_strmapi_suite,
 		ft_strncmp_suite,
-		ft_strndup_suite,
 		ft_strnstr_suite,
 		ft_strrchr_suite,
 		ft_strtrim_suite,
