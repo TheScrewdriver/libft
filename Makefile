@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/21 15:33:42 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/22 14:50:06 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,15 +37,15 @@ SRCS += ft_toupper.c
 
 # list
 
-SRCS_BONUS += ft_lstadd_back_bonus.c
-SRCS_BONUS += ft_lstadd_front_bonus.c
-SRCS_BONUS += ft_lstclear_bonus.c
-SRCS_BONUS += ft_lstdelone_bonus.c
-SRCS_BONUS += ft_lstiter_bonus.c
-SRCS_BONUS += ft_lstlast_bonus.c
-SRCS_BONUS += ft_lstmap_bonus.c
-SRCS_BONUS += ft_lstnew_bonus.c
-SRCS_BONUS += ft_lstsize_bonus.c
+SRCS_BONUS += ft_lstadd_back.c
+SRCS_BONUS += ft_lstadd_front.c
+SRCS_BONUS += ft_lstclear.c
+SRCS_BONUS += ft_lstdelone.c
+SRCS_BONUS += ft_lstiter.c
+SRCS_BONUS += ft_lstlast.c
+SRCS_BONUS += ft_lstmap.c
+SRCS_BONUS += ft_lstnew.c
+SRCS_BONUS += ft_lstsize.c
 
 # memory
 
