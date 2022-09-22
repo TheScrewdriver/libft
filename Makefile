@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/22 15:06:10 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/22 15:21:04 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -94,11 +94,6 @@ vpath %.c $(PATH_SRCS)
 PATH_OBJS = objs
 OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
 
-
-### CHECK_FOLDER
-
-CHECK_FOLDER += tests/
-
 ### INCLUDES
 
 INCLUDES += includes/
@@ -110,7 +105,7 @@ CC = clang
 CFLAGS += -Wall
 CFLAGS += -Wextra
 
-ifneq ($(noerr), true)
+ifneq ($(noerror), 1)
 	CFLAGS += -Werror
 endif
 
@@ -131,20 +126,14 @@ $(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
 	@mkdir -p $(PATH_OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
-test: $(NAME)
-	$(MAKE) -sC $(CHECK_FOLDER) $(IS_BONUS)
-	$(CHECK_FOLDER)/run_tests.sh $(CHECK_FOLDER)/exe
-
 clean:
 	$(RM) -R $(PATH_OBJS)
-	$(MAKE) -sC $(CHECK_FOLDER) clean
 
 fclean: clean
 	$(RM) $(NAME)
-	$(MAKE) -sC $(CHECK_FOLDER) fclean
 
 re: fclean
 	$(MAKE)
 
-.PHONY: all test bonus clean fclean re
-.SILENT: test bonus
+.PHONY: all bonus clean fclean re
+.SILENT: bonus
