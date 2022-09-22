@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
+#include "libft.h"
 
 static t_list	*lst_fill(t_list *lst, void *(*f)(void *))
 {

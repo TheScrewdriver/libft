@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_strings.h>
+#include <libft.h>
 
 static size_t	get_min_size(const size_t size1, const size_t size2)
 {

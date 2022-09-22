@@ -6,11 +6,11 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 19:10:20 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/03 13:25:00 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/22 14:21:55 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_ctype.h>
+#include "libft.h"
 
 int	ft_isupper(int c)
 {

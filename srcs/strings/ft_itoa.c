@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_strings.h"
+#include "libft.h"
 
 static size_t	get_size_nb(int nb)
 {
