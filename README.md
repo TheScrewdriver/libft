@@ -135,6 +135,12 @@ To compile the libft:
 #### [`ft_lstlast`](srcs/list/ft_lstlast_bonus.c)
 > Returns the last element of the list.
 
+#### [`ft_lstmap`](srcs/list/ft_lstmap_bonus.c)
+> Allocates (with malloc(3)) and returns a duplicate of the list,
+> but f has been applied to each element of this new list.
+> Release the duplicate (using [ft_lstclear](srcs/list/ft_lstclear_bonus.c))
+> if the allocation fails and returns NULL.
+
 #### [`ft_lstnew`](srcs/list/ft_lstnew_bonus.c)
 > Allocates (with malloc(3)) and returns a list which takes
 > as content the input content.

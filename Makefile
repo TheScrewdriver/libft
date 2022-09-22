@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/21 11:22:39 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/21 15:33:42 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ SRCS_BONUS += ft_lstclear_bonus.c
 SRCS_BONUS += ft_lstdelone_bonus.c
 SRCS_BONUS += ft_lstiter_bonus.c
 SRCS_BONUS += ft_lstlast_bonus.c
+SRCS_BONUS += ft_lstmap_bonus.c
 SRCS_BONUS += ft_lstnew_bonus.c
 SRCS_BONUS += ft_lstsize_bonus.c
 
