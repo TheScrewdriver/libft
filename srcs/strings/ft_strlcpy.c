@@ -6,11 +6,11 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 12:15:03 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/10 12:19:54 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/09/22 15:26:07 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
