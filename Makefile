@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/21 15:33:42 by rbroque          ###   ########.fr        #
+#    Updated: 2022/09/23 20:33:40 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,11 @@ NAME = libft.a
 ### SRCS
 
 PATH_SRCS += srcs/
-PATH_SRCS += srcs/ctype
-PATH_SRCS += srcs/list
-PATH_SRCS += srcs/memory
-PATH_SRCS += srcs/output
-PATH_SRCS += srcs/strings
+PATH_SRCS += srcs/ctype/
+PATH_SRCS += srcs/list/
+PATH_SRCS += srcs/memory/
+PATH_SRCS += srcs/output/
+PATH_SRCS += srcs/strings/
 
 # ctype
 
