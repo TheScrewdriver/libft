@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 10:15:48 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/22 15:09:30 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/11/04 00:45:43 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 # include <stdbool.h>
 
 # define SPACE ' '
+# define FIRST_ASCII 0
+# define LAST_ASCII 127
 # define FIRST_WHITESPACE 9 
 # define LAST_WHITESPACE 13
 # define FIRST_PRINTABLE 32
