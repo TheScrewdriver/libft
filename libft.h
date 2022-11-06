@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 10:15:48 by rbroque           #+#    #+#             */
-/*   Updated: 2022/11/04 00:45:43 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/11/06 18:27:28 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdio.h>
 # include <stdbool.h>
 
+# define EMPTY_STRING ""
 # define SPACE ' '
 # define FIRST_ASCII 0
 # define LAST_ASCII 127
