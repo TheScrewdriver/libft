@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 16:06:36 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/14 16:55:30 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/11/07 13:35:49 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	new_len = 0;
 	if (start <= slen)
 		new_len = get_min(slen - start, len);
+	else
+		start = slen;
 	substr = (char *)malloc((new_len + 1) * sizeof(char));
 	if (substr != NULL)
 		ft_strlcpy(substr, s + start, new_len + 1);
