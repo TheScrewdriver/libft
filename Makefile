@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/11/08 01:15:19 by rbroque          ###   ########.fr        #
+#    Updated: 2022/11/08 01:40:33 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,8 +83,12 @@ SRCS += ft_substr.c
 
 ifeq (bonus, $(findstring bonus, $(MAKECMDGOALS)))
 	SRCS += $(SRCS_BONUS)
+
+#
 else ifeq (test, $(findstring test, $(MAKECMDGOALS)))
 	SRCS += $(SRCS_BONUS)
+#
+
 endif
 
 vpath %.c $(PATH_SRCS)
@@ -93,6 +97,10 @@ vpath %.c $(PATH_SRCS)
 
 PATH_OBJS = objs
 OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
+
+### CHECK_FOLDER
+
+CHECK_FOLDER += tests/
 
 ### INCLUDES
 
@@ -126,11 +134,17 @@ $(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
 	@mkdir -p $(PATH_OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
+test: $(NAME)
+	$(MAKE) -C $(CHECK_FOLDER)
+	$(CHECK_FOLDER)/run_tests.sh $(CHECK_FOLDER)/exe
+
 clean:
 	$(RM) -R $(PATH_OBJS)
+	$(MAKE) -sC $(CHECK_FOLDER) clean
 
 fclean: clean
 	$(RM) $(NAME)
+	$(MAKE) -sC $(CHECK_FOLDER) fclean
 
 re: fclean
 	$(MAKE)
