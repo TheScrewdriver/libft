@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/11/11 21:09:37 by rbroque          ###   ########.fr        #
+#    Updated: 2022/11/11 21:20:52 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,11 @@ SRCS += ft_isprint.c
 SRCS += ft_isupper.c
 SRCS += ft_tolower.c
 SRCS += ft_toupper.c
+
+# conv
+
+SRCS += ft_atoi.c
+SRCS += ft_itoa.c
 
 # list
 
@@ -67,8 +72,6 @@ SRCS += ft_putstr_fd.c
 
 # strings
 
-SRCS += ft_atoi.c
-SRCS += ft_itoa.c
 SRCS += ft_split.c
 SRCS += ft_strchr.c
 SRCS += ft_strcpy.c
