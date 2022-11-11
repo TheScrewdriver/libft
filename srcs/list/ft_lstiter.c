@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.test.c                               :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 15:30:23 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 17:05:39 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/22 14:48:00 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/22 14:48:01 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-Suite	*ft_putchar_fd_suite(void)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	Suite	*s;
-	TCase	*new;
-
-	s = suite_create("FT_PUTCHAR_FD");
-	new = tcase_create("Result");
-	suite_add_tcase(s, new);
-	return (s);
+	if (lst != NULL)
+	{
+		if (f != NULL)
+			f(lst->content);
+		ft_lstiter(lst->next, f);
+	}
 }

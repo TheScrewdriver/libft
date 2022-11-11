@@ -6,11 +6,11 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 14:49:34 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/04 09:44:44 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/11/11 21:11:05 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_ctype.h"
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 12:51:40 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 10:16:09 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/11/11 21:08:04 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@
 # include <stdint.h>
 # include <stdbool.h>
 
-# define SPACE ' '
-# define FIRST_WHITESPACE 9 
-# define LAST_WHITESPACE 13
-
-int		ft_atoi(const char *str);
-char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strcpy(char *dst, char *src);

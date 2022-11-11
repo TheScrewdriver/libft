@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_conv.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 21:58:57 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/20 21:59:55 by rbroque          ###   ########.fr       */
+/*   Created: 2022/11/11 21:06:20 by rbroque           #+#    #+#             */
+/*   Updated: 2022/11/11 21:09:53 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_list.h"
+#ifndef FT_CONV_H
+# define FT_CONV_H
 
-int	ft_lstsize(t_list *lst)
-{
-	int	size;
+# define SPACE ' '
+# define FIRST_WHITESPACE 9 
+# define LAST_WHITESPACE 13
 
-	size = 0;
-	while (lst != NULL)
-	{
-		lst = lst->next;
-		++size;
-	}
-	return (size);
-}
+int		ft_atoi(const char *str);
+char	*ft_itoa(int n);
+
+#endif

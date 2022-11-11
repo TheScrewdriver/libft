@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.test.c                               :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 21:48:41 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 21:49:04 by rbroque          ###   ########.fr       */
+/*   Created: 2022/09/22 14:49:34 by rbroque           #+#    #+#             */
+/*   Updated: 2022/09/22 14:49:35 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.test.h"
+#include "libft.h"
 
-Suite	*ft_putendl_fd_suite(void)
+int	ft_lstsize(t_list *lst)
 {
-	Suite	*s;
-	TCase	*new;
+	int	size;
 
-	s = suite_create("FT_PUTENDL_FD");
-	new = tcase_create("Result");
-	suite_add_tcase(s, new);
-	return (s);
+	size = 0;
+	while (lst != NULL)
+	{
+		lst = lst->next;
+		++size;
+	}
+	return (size);
 }

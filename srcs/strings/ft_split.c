@@ -6,11 +6,11 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 15:29:49 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 14:27:10 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/11/07 11:34:54 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_strings.h"
+#include "libft.h"
 
 static size_t	count_words(char const *s, char c)
 {
@@ -48,12 +48,15 @@ static size_t	get_wordlen(const char *s, char c)
 
 static char	*get_word(const char **s, char c)
 {
-	const size_t	wordlen = get_wordlen(*s, c);
-	char			*word;
+	size_t	wordlen;
+	char	*word;
 
 	while (**s == c)
 		++(*s);
-	word = ft_strndup(*s, wordlen);
+	wordlen = get_wordlen(*s, c);
+	word = (char *)malloc((wordlen + 1) * sizeof(char));
+	if (word != NULL)
+		ft_strlcpy(word, *s, wordlen + 1);
 	*s += wordlen;
 	return (word);
 }

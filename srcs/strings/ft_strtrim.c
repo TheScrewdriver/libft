@@ -6,11 +6,11 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 18:32:23 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 14:18:12 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/11/11 21:13:51 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_strings.h"
+#include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

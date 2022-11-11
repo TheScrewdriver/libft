@@ -6,25 +6,23 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 12:19:32 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/10 12:20:04 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/11/08 00:23:41 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_strings.h>
-
-static size_t	get_min_size(const size_t size1, const size_t size2)
-{
-	if (size1 < size2)
-		return (size1);
-	return (size2);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	const size_t	size_dest = ft_strlen(dst);
 	const size_t	size_src = ft_strlen(src);
-	const size_t	min_size = get_min_size(size_dest, dstsize);
+	size_t			size_dest;
 
+	if (dst == NULL)
+		size_dest = 0;
+	else
+		size_dest = ft_strlen(dst);
+	if (dstsize <= size_dest)
+		return (dstsize + size_src);
 	ft_strlcpy(dst + size_dest, src, dstsize - size_dest);
-	return (min_size + size_src);
+	return (size_dest + size_src);
 }

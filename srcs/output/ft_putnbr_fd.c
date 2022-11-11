@@ -6,11 +6,11 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 22:06:37 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/25 15:54:57 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/11/07 18:44:52 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_output.h"
+#include "libft.h"
 
 static void	print_nb(unsigned int n, int fd)
 {

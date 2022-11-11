@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:23:37 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/14 15:31:39 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/11/11 21:12:03 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <limits.h>
 
+# define FIRST_ASCII 0
+# define LAST_ASCII 127
 # define FIRST_PRINTABLE 32
 # define LAST_PRINTABLE 126
 # define CASE_OFFSET 32

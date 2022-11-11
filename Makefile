@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/09/23 20:33:40 by rbroque          ###   ########.fr        #
+#    Updated: 2022/11/11 21:09:37 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ NAME = libft.a
 ### SRCS
 
 PATH_SRCS += srcs/
+PATH_SRCS += srcs/conv/
 PATH_SRCS += srcs/ctype/
 PATH_SRCS += srcs/list/
 PATH_SRCS += srcs/memory/
@@ -37,15 +38,15 @@ SRCS += ft_toupper.c
 
 # list
 
-SRCS_BONUS += ft_lstadd_back_bonus.c
-SRCS_BONUS += ft_lstadd_front_bonus.c
-SRCS_BONUS += ft_lstclear_bonus.c
-SRCS_BONUS += ft_lstdelone_bonus.c
-SRCS_BONUS += ft_lstiter_bonus.c
-SRCS_BONUS += ft_lstlast_bonus.c
-SRCS_BONUS += ft_lstmap_bonus.c
-SRCS_BONUS += ft_lstnew_bonus.c
-SRCS_BONUS += ft_lstsize_bonus.c
+SRCS += ft_lstadd_back.c
+SRCS += ft_lstadd_front.c
+SRCS += ft_lstclear.c
+SRCS += ft_lstdelone.c
+SRCS += ft_lstiter.c
+SRCS += ft_lstlast.c
+SRCS += ft_lstmap.c
+SRCS += ft_lstnew.c
+SRCS += ft_lstsize.c
 
 # memory
 
@@ -85,23 +86,12 @@ SRCS += ft_strrchr.c
 SRCS += ft_strtrim.c
 SRCS += ft_substr.c
 
-ifeq (bonus, $(findstring bonus, $(MAKECMDGOALS)))
-	SRCS += $(SRCS_BONUS)
-else ifeq (test, $(findstring test, $(MAKECMDGOALS)))
-	SRCS += $(SRCS_BONUS)
-endif
-
 vpath %.c $(PATH_SRCS)
 
 ### OBJS
 
 PATH_OBJS = objs
 OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
-
-
-### CHECK_FOLDER
-
-CHECK_FOLDER += tests/
 
 ### INCLUDES
 
@@ -126,8 +116,6 @@ endif
 
 all: $(NAME)
 
-bonus: $(NAME)
-
 $(NAME): $(OBJS)
 	ar rcs $@ $^
 
@@ -135,20 +123,13 @@ $(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
 	@mkdir -p $(PATH_OBJS)
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
-test: $(NAME)
-	$(MAKE) -sC $(CHECK_FOLDER) $(IS_BONUS)
-	$(CHECK_FOLDER)/run_tests.sh $(CHECK_FOLDER)/exe
-
 clean:
 	$(RM) -R $(PATH_OBJS)
-	$(MAKE) -sC $(CHECK_FOLDER) clean
 
 fclean: clean
 	$(RM) $(NAME)
-	$(MAKE) -sC $(CHECK_FOLDER) fclean
 
 re: fclean
 	$(MAKE)
 
-.PHONY: all test bonus clean fclean re
-.SILENT: test bonus
+.PHONY: all clean fclean re

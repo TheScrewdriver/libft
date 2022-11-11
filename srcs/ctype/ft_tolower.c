@@ -6,11 +6,11 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/11 12:08:56 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/11 12:09:29 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/11/11 21:12:48 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_ctype.h"
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
