@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 15:03:56 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/16 12:12:28 by rbroque          ###   ########.fr       */
+/*   Created: 2022/11/11 21:49:19 by rbroque           #+#    #+#             */
+/*   Updated: 2022/11/11 21:50:58 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_strings.h"
+#include "libft.h"
 
-static bool	is_whitespace(const char c)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	return (c == SPACE || (FIRST_WHITESPACE <= c && c <= LAST_WHITESPACE));
-}
-
-int	ft_atoi(const char *nptr)
-{
-	long	nb;
 	size_t	i;
 
-	nb = 0;
-	while (is_whitespace(*nptr) == true)
-		++nptr;
 	i = 0;
-	if (nptr[0] == '-' || nptr[0] == '+')
-		++i;
-	while ('0' <= nptr[i] && nptr[i] <= '9')
+	while (i < n && src[i] != '\0')
 	{
-		nb = nb * 10 + (nptr[i] - '0');
+		dest[i] = src[i];
 		++i;
 	}
-	if (nptr[0] == '-')
-		nb *= -1;
-	return ((int)nb);
+	while (i < n)
+	{
+		dest[i] = '\0';
+		++i;
+	}
+	return (dest);
 }

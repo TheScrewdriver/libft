@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   index_of.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 15:00:22 by rbroque           #+#    #+#             */
-/*   Updated: 2022/11/11 21:55:10 by rbroque          ###   ########.fr       */
+/*   Created: 2022/11/11 21:53:42 by rbroque           #+#    #+#             */
+/*   Updated: 2022/11/11 22:05:59 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include "libft.h"
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 4096
-# endif
-# define OPEN_MAX FOPEN_MAX
-
-typedef enum e_line_status
+ssize_t	index_of(const char *str, const char c)
 {
-	INVALID_LINE,
-	VALID_LINE
-}	t_line_status;
+	ssize_t	index;
 
-char	*get_next_line(int fd);
-
-#endif
+	index = 0;
+	while (str[index] != '\0' && str[index] != c)
+		++index;
+	if (str[index] != c)
+		return (-1);
+	return (index);
+}
