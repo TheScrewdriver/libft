@@ -1,22 +1,6 @@
 # libft
 A C-library of usual functions
 
-## Requirements
-
-To execute tests, the [Check Unit Testing Frameworks for C](https://github.com/libcheck/check) is required.\
-In addition, depending on your OS, you must change, in the ["test Makefile"](tests/Makefile), the installation path of the Check library.
-For example, on Ubuntu LTS, it looks like this:
-
-![Screenshot](https://user-images.githubusercontent.com/58867296/191380453-93c01e8c-81e6-4583-b0b6-5ea8f6403d5d.png)
-
-## Using
-
-To compile the libft:
-
-	$ make
-	$ make bonus // for bonus functions
-	$ make test  // for tests
-
 ## Library content
 
 ### Part 1 - libc
@@ -35,7 +19,7 @@ To compile the libft:
 
 ##### Functions from `<stdlib.h>` library
 
-* [`ft_atoi`](srcs/strings/ft_atoi.c)
+* [`ft_atoi`](srcs/conv/ft_atoi.c)
 * [`ft_calloc`](srcs/memory/ft_calloc.c)
 
 ##### Functions from `<strings.h>` library
@@ -62,7 +46,7 @@ To compile the libft:
 
 ### Part 2 - Additional functions
 
-#### [`ft_itoa`](srcs/strings/ft_itoa.c)
+#### [`ft_itoa`](srcs/conv/ft_itoa.c)
 > Allocates (with malloc(3)) and returns a string
 > representing the input integer.
 > Negative numbers are supported.
@@ -113,38 +97,36 @@ To compile the libft:
 > This new string starts at the input index.
 > Returns NULL if allocation fails.
 
-### Part 3 - BONUS
-
-#### [`ft_lstadd_back`](srcs/list/ft_lstadd_back_bonus.c)
+#### [`ft_lstadd_back`](srcs/list/ft_lstadd_back.c)
 > Adds a new element at the end of the list.
 
-#### [`ft_lstadd_front`](srcs/list/ft_lstadd_front_bonus.c)
+#### [`ft_lstadd_front`](srcs/list/ft_lstadd_front.c)
 > Adds a new element to the beginning of the list.
 
-#### [`ft_lstclear`](srcs/list/ft_lstclear_bonus.c)
-> Frees the list (each element of the list is freed thanks to [ft_lstdelone](srcs/list/ft_lstdelone_bonus.c)).
+#### [`ft_lstclear`](srcs/list/ft_lstclear.c)
+> Frees the list (each element of the list is freed thanks to [ft_lstdelone](srcs/list/ft_lstdelone.c)).
 > Then all element pointers are set to NULL.
 
-#### [`ft_lstdelone`](srcs/list/ft_lstdelone_bonus.c)
+#### [`ft_lstdelone`](srcs/list/ft_lstdelone.c)
 > Frees the element's contents with del (passed as an argument),
 > then frees the element with free(3).
 
-#### [`ft_lstiter`](srcs/list/ft_lstiter_bonus.c)
+#### [`ft_lstiter`](srcs/list/ft_lstiter.c)
 > Iterates over the list and applies the input function to each element.
 
-#### [`ft_lstlast`](srcs/list/ft_lstlast_bonus.c)
+#### [`ft_lstlast`](srcs/list/ft_lstlast.c)
 > Returns the last element of the list.
 
-#### [`ft_lstmap`](srcs/list/ft_lstmap_bonus.c)
+#### [`ft_lstmap`](srcs/list/ft_lstmap.c)
 > Allocates (with malloc(3)) and returns a duplicate of the list,
 > but f has been applied to each element of this new list.
-> Release the duplicate (using [ft_lstclear](srcs/list/ft_lstclear_bonus.c))
+> Release the duplicate (using [ft_lstclear](srcs/list/ft_lstclear.c))
 > if the allocation fails and returns NULL.
 
-#### [`ft_lstnew`](srcs/list/ft_lstnew_bonus.c)
+#### [`ft_lstnew`](srcs/list/ft_lstnew.c)
 > Allocates (with malloc(3)) and returns a list which takes
 > as content the input content.
 > Returns NULL if allocation fails.
 
-#### [`ft_lstsize`](srcs/list/ft_lstsize_bonus.c)
+#### [`ft_lstsize`](srcs/list/ft_lstsize.c)
 > Returns the size of the list.
