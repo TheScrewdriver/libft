@@ -85,6 +85,12 @@ A C-library of usual functions
 > Allocates (with malloc(3)) and returns a duplicate string each character
 > of which has been modified by the input function
 > (which takes as argument each character of the input string and its index).
+
+#### [`ft_strnjoin`](srcs/strings/ft_strnjoin.c)
+> Allocates (with malloc(3)) and returns a concatenation of two strings.
+> The first string is freed.
+> If a string is NULL, it will be treated as empty string
+> Returns NULL if allocation fails.
 > Returns NULL if the allocation fails.
 
 #### [`ft_strtrim`](srcs/strings/ft_strtrim.c)

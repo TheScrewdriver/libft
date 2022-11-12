@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 15:12:42 by rbroque           #+#    #+#             */
-/*   Updated: 2022/11/12 15:23:12 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/11/12 15:42:25 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static t_line_status	get_line_from_buff(char **line, char *buffer)
 	index = index_of(buffer, '\n');
 	if (*buffer != '\0')
 	{
-		*line = strnjoin(*line, buffer, index + 1);
+		*line = ft_strnjoin(*line, buffer, index + 1);
 		if (buffer[index] == '\n')
 		{
 			ft_strncpy(buffer, buffer + index + 1, BUFFER_SIZE);

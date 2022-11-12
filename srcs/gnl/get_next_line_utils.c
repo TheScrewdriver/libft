@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:00:42 by rbroque           #+#    #+#             */
-/*   Updated: 2022/11/12 15:23:28 by rbroque          ###   ########.fr       */
+/*   Updated: 2022/11/12 15:42:33 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strncpy(char *dest, char *src, size_t size)
 	return (dest);
 }
 
-char	*strnjoin(char *s1, const char *s2, const size_t n)
+char	*ft_strnjoin(char *s1, const char *s2, const size_t n)
 {
 	size_t	len1;
 	size_t	len2;
