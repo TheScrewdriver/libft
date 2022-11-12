@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/11/11 21:20:52 by rbroque          ###   ########.fr        #
+#    Updated: 2022/11/12 15:20:54 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ NAME = libft.a
 PATH_SRCS += srcs/
 PATH_SRCS += srcs/conv/
 PATH_SRCS += srcs/ctype/
+PATH_SRCS += srcs/gnl/
 PATH_SRCS += srcs/list/
 PATH_SRCS += srcs/memory/
 PATH_SRCS += srcs/output/
@@ -40,6 +41,11 @@ SRCS += ft_toupper.c
 
 SRCS += ft_atoi.c
 SRCS += ft_itoa.c
+
+# gnl
+
+SRCS += get_next_line.c
+SRCS += get_next_line_utils.c
 
 # list
 
