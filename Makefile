@@ -6,15 +6,25 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/11/11 22:14:22 by rbroque          ###   ########.fr        #
+#    Updated: 2022/12/07 01:05:38 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-### NAME
+#############
+#### ENV ####
+#############
+
+SHELL = /usr/bin/bash
+
+##############
+#### NAME ####
+##############
 
 NAME = libft.a
 
-### SRCS
+##############
+#### SRCS ####
+##############
 
 PATH_SRCS += srcs/
 PATH_SRCS += srcs/conv/
@@ -77,7 +87,6 @@ SRCS += ft_putstr_fd.c
 
 # strings
 
-SRCS += index_of.c
 SRCS += ft_split.c
 SRCS += ft_strchr.c
 SRCS += ft_strcpy.c
@@ -89,9 +98,7 @@ SRCS += ft_strlcpy.c
 SRCS += ft_strlen.c
 SRCS += ft_strmapi.c
 SRCS += ft_strncmp.c
-SRCS += ft_strncpy.c
 SRCS += ft_strndup.c
-SRCS += ft_strnjoin.c
 SRCS += ft_strnstr.c
 SRCS += ft_strrchr.c
 SRCS += ft_strtrim.c
@@ -99,18 +106,24 @@ SRCS += ft_substr.c
 
 vpath %.c $(PATH_SRCS)
 
-### OBJS
+###############
+#### OBJS #####
+###############
 
 PATH_OBJS = objs
 OBJS = $(patsubst %.c, $(PATH_OBJS)/%.o, $(SRCS))
 
-### INCLUDES
+##################
+#### INCLUDES ####
+##################
 
 INCLUDES += includes/
 
-### COMPILATION
+#####################
+#### COMPILATION ####
+#####################
 
-CC = cc
+CC = clang
 
 CFLAGS += -Wall
 CFLAGS += -Wextra
@@ -123,24 +136,55 @@ ifeq ($(everything), true)
 	CFLAGS += -Weverything
 endif
 
-### RULES
+#################
+#### DISPLAY ####
+#################
+
+ifneq ($(words $(MAKECMDGOALS)),1) # if no argument was given to make...
+.DEFAULT_GOAL = all # set the default goal to all
+%:                   # define a last resort default rule
+	@$(MAKE) $@ --no-print-directory -rRf $(firstword $(MAKEFILE_LIST)) # recursive make call, 
+else
+ifndef ECHO
+T := $(shell $(MAKE) $(MAKECMDGOALS) --no-print-directory \
+      -nrRf $(firstword $(MAKEFILE_LIST)) \
+      ECHO="COUNTTHIS" | grep -c "COUNTTHIS")
+N := x
+C = $(words $N)$(eval N := x $N)
+
+ECHOC = echo -ne "\r\033[2K"
+ECHO = $(ECHOC) "[`expr $C '*' 100 / $T`%]"
+endif
+
+###############
+#### RULES ####
+###############
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $@ $^
+	@ar rcs $@ $^
+	@$(ECHOC) "--> $(NAME) COMPILED !\n"
 
 $(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
+	@$(ECHO) "COMPILING $<"
 	@mkdir -p $(PATH_OBJS)
-	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
+	@$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
 clean:
-	$(RM) -R $(PATH_OBJS)
+	@echo "Cleaning up .o files..."
+	@$(RM) -R $(PATH_OBJS)
+	@echo "--> .o files cleaned !"
 
 fclean: clean
-	$(RM) $(NAME)
+	@echo "Cleaning up $(NAME)..."
+	@$(RM) $(NAME)
+	@echo "--> $(NAME) cleaned !"
 
 re: fclean
-	$(MAKE)
+	@echo "Rebuilding..."
+	@$(MAKE) -s
 
 .PHONY: all clean fclean re
+
+endif
