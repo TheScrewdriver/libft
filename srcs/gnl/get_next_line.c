@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 15:12:42 by rbroque           #+#    #+#             */
-/*   Updated: 2022/11/11 21:44:57 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/01/17 12:02:12 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static t_line_status	get_line_from_buff(char **line, char *buffer)
 {
 	size_t	index;
 
-	index = index_of(buffer, '\n');
+	index = abs_index(buffer, '\n');
 	if (*buffer != '\0')
 	{
 		*line = ft_strnjoin(*line, buffer, index + 1);
@@ -50,7 +50,7 @@ static t_line_status	fill_line_from_file(char **line,
 
 static void	get_line(int fd, char **line)
 {
-	static char		rest[OPEN_MAX][BUFFER_SIZE + 1] = {0};
+	static char		rest[OPEN_MAX][BUFFER_SIZE + 1] = {{0}};
 
 	if (get_line_from_buff(line, rest[fd]) == INVALID_LINE)
 		fill_line_from_file(line, rest[fd], fd);

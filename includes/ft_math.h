@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_math.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 10:55:30 by rbroque           #+#    #+#             */
-/*   Updated: 2022/12/20 22:59:44 by rbroque          ###   ########.fr       */
+/*   Created: 2023/01/03 15:15:58 by rbroque           #+#    #+#             */
+/*   Updated: 2023/01/06 20:47:34 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_MATH_H
+# define FT_MATH_H
 
-void	*ft_memchr(const void *s, int c, size_t n)
-{
-	size_t	i;
+unsigned long	get_abs(int n);
+int				get_max(const int n1, const int n2);
 
-	i = 0;
-	c = (uint8_t)c;
-	while (i < n)
-	{
-		if (((uint8_t *)s)[i] == c)
-			return ((void *)(s + i));
-		++i;
-	}
-	return (NULL);
-}
+#endif

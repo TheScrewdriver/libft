@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   free_strs.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 10:55:30 by rbroque           #+#    #+#             */
-/*   Updated: 2022/12/20 22:59:44 by rbroque          ###   ########.fr       */
+/*   Created: 2023/01/04 16:40:19 by rbroque           #+#    #+#             */
+/*   Updated: 2023/01/27 15:31:04 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	free_strs(char **strs)
 {
 	size_t	i;
 
-	i = 0;
-	c = (uint8_t)c;
-	while (i < n)
+	if (strs != NULL)
 	{
-		if (((uint8_t *)s)[i] == c)
-			return ((void *)(s + i));
-		++i;
+		i = 0;
+		while (strs[i] != NULL)
+		{
+			free(strs[i]);
+			++i;
+		}
+		free(strs);
 	}
-	return (NULL);
 }

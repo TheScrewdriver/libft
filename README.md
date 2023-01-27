@@ -34,6 +34,7 @@ A C-library of usual functions
 ##### Functions from `<string.h>` library
 
 * [`ft_strchr`](srcs/strings/ft_strchr.c)
+* [`ft_strcmp`](srcs/strings/ft_strcmp.c)
 * [`ft_strcpy`](srcs/strings/ft_strcpy.c)
 * [`ft_strdup`](srcs/strings/ft_strdup.c)
 * [`ft_strlen`](srcs/strings/ft_strlen.c)
@@ -47,9 +48,8 @@ A C-library of usual functions
 
 ### Part 2 - Additional functions
 
-#### [`index_of`](srcs/strings/index_of.c)
-> Returns the index of the first matching character occurence.
-> If the character isn't found, it returns -1.
+#### [`free_strs`](srcs/free/free_strs.c)
+> Free all the strings in the string array then free the array pointer.
 
 #### [`ft_itoa`](srcs/conv/ft_itoa.c)
 > Allocates (with malloc(3)) and returns a string
@@ -147,3 +147,16 @@ A C-library of usual functions
 > This new string starts at the input index.
 > Returns NULL if allocation fails.
 
+#### [`get_abs`](srcs/math/get_abs.c)
+> Returns the absolute value of an integer.
+
+#### [`get_max`](srcs/math/get_max.c)
+> Returns the biggest number between two integers.
+
+#### [`index_of`](srcs/strings/index_of.c)
+> Returns the index of the first matching character occurence.
+> If the character isn't found, it returns -1.
+
+#### [`abs_index`](srcs/strings/abs_index.c)
+> Returns the index of the first matching character occurence in a null-terminated string.
+> If the character isn't found, it returns the length of the string.

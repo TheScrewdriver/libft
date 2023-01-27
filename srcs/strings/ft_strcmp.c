@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 10:55:30 by rbroque           #+#    #+#             */
-/*   Updated: 2022/12/20 22:59:44 by rbroque          ###   ########.fr       */
+/*   Created: 2023/01/06 20:37:33 by rbroque           #+#    #+#             */
+/*   Updated: 2023/01/27 15:30:44 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	size_t	i;
+	const size_t	max_len = get_max(ft_strlen(s1), ft_strlen(s2));
 
-	i = 0;
-	c = (uint8_t)c;
-	while (i < n)
-	{
-		if (((uint8_t *)s)[i] == c)
-			return ((void *)(s + i));
-		++i;
-	}
-	return (NULL);
+	return (ft_strncmp(s1, s2, max_len));
 }

@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 12:51:40 by rbroque           #+#    #+#             */
-/*   Updated: 2022/12/07 16:34:48 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/01/17 12:02:01 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@
 # include <stdint.h>
 # include <stdbool.h>
 
+size_t	abs_index(const char *buffer, const char c);
 ssize_t	index_of(const char *str, const char c);
 char	**ft_split(char const *s, char c);
 char	**ft_split_set(char const *s, const char *charset);
 char	*ft_strchr(const char *s, int c);
+int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strcpy(char *dst, char *src);
 char	*ft_strdup(const char *s);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));

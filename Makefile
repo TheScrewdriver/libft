@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2022/12/07 16:33:40 by rbroque          ###   ########.fr        #
+#    Updated: 2023/01/17 12:48:33 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,8 +29,10 @@ NAME = libft.a
 PATH_SRCS += srcs/
 PATH_SRCS += srcs/conv/
 PATH_SRCS += srcs/ctype/
+PATH_SRCS += srcs/free/
 PATH_SRCS += srcs/gnl/
 PATH_SRCS += srcs/list/
+PATH_SRCS += srcs/math/
 PATH_SRCS += srcs/memory/
 PATH_SRCS += srcs/output/
 PATH_SRCS += srcs/strings/
@@ -50,7 +52,12 @@ SRCS += ft_toupper.c
 # conv
 
 SRCS += ft_atoi.c
+SRCS += ft_atoi_base.c
 SRCS += ft_itoa.c
+
+# free
+
+SRCS += free_strs.c
 
 # gnl
 
@@ -67,6 +74,11 @@ SRCS += ft_lstlast.c
 SRCS += ft_lstmap.c
 SRCS += ft_lstnew.c
 SRCS += ft_lstsize.c
+
+# math
+
+SRCS += get_abs.c
+SRCS += get_max.c
 
 # memory
 
@@ -87,10 +99,12 @@ SRCS += ft_putstr_fd.c
 
 # strings
 
+SRCS += abs_index.c
 SRCS += index_of.c
 SRCS += ft_split.c
 SRCS += ft_split_set.c
 SRCS += ft_strchr.c
+SRCS += ft_strcmp.c
 SRCS += ft_strcpy.c
 SRCS += ft_strdup.c
 SRCS += ft_striteri.c
@@ -131,6 +145,7 @@ CC = clang
 
 CFLAGS += -Wall
 CFLAGS += -Wextra
+CFLAGS += -fPIE
 
 ifneq ($(noerr), true)
 	CFLAGS += -Werror
@@ -168,26 +183,27 @@ endif
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@ar rcs $@ $^
-	@$(ECHOC) $(GREEN) "--> $(NAME) COMPILED !"$(NC)"\n"
+	ar rcs $@ $^
+	$(ECHOC) $(GREEN) "--> $(NAME) COMPILED !"$(NC)"\n"
 
 $(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
-	@$(ECHO) $(ORANGE) "Compiling $<"
-	@mkdir -p $(PATH_OBJS)
-	@$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
+	$(ECHO) $(ORANGE) "Compiling $<"
+	mkdir -p $(PATH_OBJS)
+	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
 clean:
-	@$(ECHOC) $(YELLOW) "Cleaning up .o files..." $(NC)
-	@$(RM) -R $(PATH_OBJS)
-	@$(ECHOC) $(GREEN) "--> .o files cleaned !"$(NC)"\n"
+	$(ECHOC) $(YELLOW) "Cleaning up .o files..." $(NC)
+	$(RM) -R $(PATH_OBJS)
+	$(ECHOC) $(GREEN) "--> .o files cleaned !"$(NC)"\n"
 
 fclean: clean
-	@$(ECHOC) $(YELLOW) "Cleaning up $(NAME)..." $(NC)
-	@$(RM) $(NAME)
-	@$(ECHOC) $(GREEN) "--> $(NAME) cleaned !"$(NC)"\n"
+	$(ECHOC) $(YELLOW) "Cleaning up $(NAME)..." $(NC)
+	$(RM) $(NAME)
+	$(ECHOC) $(GREEN) "--> $(NAME) cleaned !"$(NC)"\n"
 
 re: fclean
-	@echo -e $(YELLOW) "\nRebuilding...\n" $(NC)
-	@$(MAKE) -s
+	echo -e $(YELLOW) "\nRebuilding...\n" $(NC)
+	$(MAKE) -s
 
 .PHONY: all clean fclean re
+.SILENT:

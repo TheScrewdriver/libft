@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   get_abs.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 10:55:30 by rbroque           #+#    #+#             */
-/*   Updated: 2022/12/20 22:59:44 by rbroque          ###   ########.fr       */
+/*   Created: 2023/01/03 15:15:17 by rbroque           #+#    #+#             */
+/*   Updated: 2023/01/06 20:43:05 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_math.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+unsigned long	get_abs(int n)
 {
-	size_t	i;
-
-	i = 0;
-	c = (uint8_t)c;
-	while (i < n)
-	{
-		if (((uint8_t *)s)[i] == c)
-			return ((void *)(s + i));
-		++i;
-	}
-	return (NULL);
+	if (n < 0)
+		return (-n);
+	return (n);
 }

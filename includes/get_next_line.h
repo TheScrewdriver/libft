@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 15:00:22 by rbroque           #+#    #+#             */
-/*   Updated: 2022/11/11 21:55:10 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/01/17 12:35:25 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 # include "libft.h"
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 4096
+#  define BUFFER_SIZE 1024
 # endif
-# define OPEN_MAX FOPEN_MAX
+# define OPEN_MAX 120
 
 typedef enum e_line_status
 {
