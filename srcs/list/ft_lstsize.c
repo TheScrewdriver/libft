@@ -6,15 +6,15 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:49:34 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/22 14:49:35 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/02/02 15:16:47 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+size_t	ft_lstsize(t_list *lst)
 {
-	int	size;
+	size_t	size;
 
 	size = 0;
 	while (lst != NULL)

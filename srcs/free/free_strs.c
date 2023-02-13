@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 16:40:19 by rbroque           #+#    #+#             */
-/*   Updated: 2023/01/27 15:31:04 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/02/06 11:32:46 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	free_strs(char **strs)
 		i = 0;
 		while (strs[i] != NULL)
 		{
-			free(strs[i]);
+			free((void *)strs[i]);
 			++i;
 		}
 		free(strs);

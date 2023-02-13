@@ -6,16 +6,15 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 12:51:40 by rbroque           #+#    #+#             */
-/*   Updated: 2023/01/17 12:02:01 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/02/07 11:46:29 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_STRINGS_H
 # define FT_STRINGS_H
 
-# include <stdio.h>
 # include <stdlib.h>
-# include <stdint.h>
+# include <stdio.h>
 # include <stdbool.h>
 
 size_t	abs_index(const char *buffer, const char c);

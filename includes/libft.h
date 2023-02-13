@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/31 10:15:48 by rbroque           #+#    #+#             */
-/*   Updated: 2023/01/28 03:23:50 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/02/07 11:45:12 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <stdint.h>
 # include <stdlib.h>
+# include <stdio.h>
+# include <stdbool.h>
 
 # include "ft_conv.h"
 # include "ft_ctype.h"
