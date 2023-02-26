@@ -160,3 +160,6 @@ A C-library of usual functions
 #### [`abs_index`](srcs/strings/abs_index.c)
 > Returns the index of the first matching character occurence in a null-terminated string.
 > If the character isn't found, it returns the length of the string.
+
+#### [`ft_log`](srcs/math/ft_log.c)
+> The log function.
