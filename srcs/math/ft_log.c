@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 12:37:11 by rbroque           #+#    #+#             */
-/*   Updated: 2023/02/26 12:51:50 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/02/26 13:06:46 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static double	taylor_approx(double x)
 	double	s;
 	double	z;
 
-	x = -x;
+	x -= 1;
 	t = 0.0;
-	s = 1;
+	s = 1.0;
 	z = x;
 	k = 1;
 	while (k <= TAYLOR_ITERATIONS)
@@ -51,5 +51,5 @@ double	ft_log(double x)
 		x *= EULER_CONST;
 		power_adjust--;
 	}
-	return (power_adjust + taylor_approx(x));
+	return (taylor_approx(x) + power_adjust);
 }
