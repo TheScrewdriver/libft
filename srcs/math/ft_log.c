@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 12:37:11 by rbroque           #+#    #+#             */
-/*   Updated: 2023/02/26 13:06:46 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/02/28 17:08:14 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ double	ft_log(double x)
 	int	power_adjust;
 
 	if (x <= 0)
-		return (0.0 / 0.0);// NaN
+		return (0.0 / 0.0);
 	power_adjust = 0;
 	while (x > 1.0)
 	{
