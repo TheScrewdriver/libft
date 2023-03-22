@@ -161,5 +161,8 @@ A C-library of usual functions
 > Returns the index of the first matching character occurence in a null-terminated string.
 > If the character isn't found, it returns the length of the string.
 
+#### [`streq`](srcs/strings/streq.c)
+> Returns true if the two strings are equal.
+
 #### [`ft_log`](srcs/math/ft_log.c)
 > The log function.
