@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 15:31:32 by rbroque           #+#    #+#             */
-/*   Updated: 2022/11/28 17:31:53 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/03/22 09:17:57 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static size_t	reduce_to_precision(size_t len, ssize_t precision)
 
 	final_len = len;
 	if (precision != UNSET_PRECISION && final_len > (size_t)precision)
-			final_len = precision;
+		final_len = precision;
 	return (final_len);
 }
 
