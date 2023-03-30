@@ -166,3 +166,7 @@ A C-library of usual functions
 
 #### [`ft_log`](srcs/math/ft_log.c)
 > The log function.
+
+#### [`is_in_str`](srcs/strings/is_in_str.c)
+> Returns a boolean which depends if a character is present in a string.
+> Returns false if the string is NULL.
