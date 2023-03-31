@@ -170,3 +170,9 @@ A C-library of usual functions
 #### [`is_in_str`](srcs/strings/is_in_str.c)
 > Returns a boolean which depends if a character is present in a string.
 > Returns false if the string is NULL.
+
+#### [`replace_str`](srcs/strings/replace_str.c)
+> Allocate (with malloc(3)) and returns a duplication of src
+> but del_len characters from the input index has been deleted
+> and the replace string has been inserted at the input index.
+> Returns NUll if allocation fails
