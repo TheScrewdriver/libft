@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 15:25:12 by rbroque           #+#    #+#             */
-/*   Updated: 2023/03/31 18:35:21 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/04/04 14:59:33 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ static char	*replace_str_safe(
 }
 
 char	*replace_str(
-	char *src,
-	char *replace,
+	const char *src,
+	const char *replace,
 	size_t index,
 	size_t delete_len
 	)
@@ -50,5 +50,5 @@ char	*replace_str(
 		delete_len = src_len + replace_len;
 	if (delete_len > src_len - index)
 		delete_len = src_len - index;
-	return (replace_str_safe(src, replace, index, delete_len));
+	return (replace_str_safe((char *)src, (char *)replace, index, delete_len));
 }
