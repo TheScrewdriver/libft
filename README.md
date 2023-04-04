@@ -51,6 +51,9 @@ A C-library of usual functions
 #### [`free_strs`](srcs/free/free_strs.c)
 > Free all the strings in the string array then free the array pointer.
 
+#### [`ft_strlen_safe`](srcs/strings/ft_strlen_safe.c)
+> Behaves like ft_strlen except that it returns 0 for NULL.
+
 #### [`ft_itoa`](srcs/conv/ft_itoa.c)
 > Allocates (with malloc(3)) and returns a string
 > representing the input integer.
