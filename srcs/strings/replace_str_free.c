@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   replace_str_free.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/31 10:15:48 by rbroque           #+#    #+#             */
-/*   Updated: 2023/04/10 15:50:04 by rbroque          ###   ########.fr       */
+/*   Created: 2023/04/10 15:44:42 by rbroque           #+#    #+#             */
+/*   Updated: 2023/04/10 16:00:41 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdint.h>
-# include <stdlib.h>
-# include <stdio.h>
-# include <stdbool.h>
+char	*replace_str_free(
+	char *src,
+	const char *replace,
+	size_t index,
+	size_t delete_len
+	)
+{
+	char *const	new_str = replace_str(src, replace, index, delete_len);
 
-# include "ft_conv.h"
-# include "ft_ctype.h"
-# include "ft_free.h"
-# include "ft_printf.h"
-# include "ft_list.h"
-# include "ft_math.h"
-# include "ft_memory.h"
-# include "ft_strings.h"
-# include "ft_output.h"
-# include "get_next_line.h"
-
-#endif
+	free(src);
+	return (new_str);
+}

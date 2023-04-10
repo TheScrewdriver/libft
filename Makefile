@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2023/04/04 17:52:46 by rbroque          ###   ########.fr        #
+#    Updated: 2023/04/10 15:58:08 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -180,6 +180,7 @@ SRCS += ft_strtrim.c
 SRCS += ft_substr.c
 SRCS += streq.c
 SRCS += is_in_str.c
+SRCS += replace_str_free.c
 SRCS += replace_str.c
 
 vpath %.c $(PATH_SRCS)

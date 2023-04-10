@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 12:51:40 by rbroque           #+#    #+#             */
-/*   Updated: 2023/04/04 17:49:07 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/04/10 16:03:52 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 bool	streq(const char *str1, const char *str2);
 bool	is_in_str(const char *str, const char c);
 char	*replace_str(const char *src, const char *replace,
+			const size_t index, const size_t delete_len);
+char	*replace_str_free(char *src, const char *replace,
 			const size_t index, const size_t delete_len);
 
 #endif

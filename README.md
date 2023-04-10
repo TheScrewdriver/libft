@@ -179,3 +179,6 @@ A C-library of usual functions
 > but del_len characters from the input index has been deleted
 > and the replace string has been inserted at the input index.
 > Returns NUll if allocation fails
+
+#### [`replace_str_free`](srcs/strings/replace_str_free.c)
+> Has the behavior of replace_str function but free the input string.
