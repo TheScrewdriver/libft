@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2023/04/14 10:40:46 by rbroque          ###   ########.fr        #
+#    Updated: 2023/04/20 09:47:42 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -119,6 +119,7 @@ SRCS += get_next_line.c
 
 # list
 
+SRCS += ft_list_remove_if.c
 SRCS += ft_lstadd_back.c
 SRCS += ft_lstadd_front.c
 SRCS += ft_lstclear.c
