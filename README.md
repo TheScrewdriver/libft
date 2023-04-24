@@ -45,6 +45,7 @@ A C-library of usual functions
 * [`ft_strndup`](srcs/strings/ft_strndup.c)
 * [`ft_strnstr`](srcs/strings/ft_strnstr.c)
 * [`ft_strrchr`](srcs/strings/ft_strrchr.c)
+* [`ft_strstr`](srcs/strings/ft_strstr.c)
 
 ### Part 2 - Additional functions
 
