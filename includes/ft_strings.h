@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 12:51:40 by rbroque           #+#    #+#             */
-/*   Updated: 2023/04/24 17:59:01 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/04/24 22:46:36 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dest, char *src, unsigned int n);
 char	*ft_strndup(const char *s, size_t n);
 char	*ft_strnjoin(char *s1, const char *s2, const size_t n);
+char	*ft_strnjoin_free(char *s1, const char *s2, const size_t len);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *big, const char *little);

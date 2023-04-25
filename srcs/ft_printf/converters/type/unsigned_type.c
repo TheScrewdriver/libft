@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:42:59 by rbroque           #+#    #+#             */
-/*   Updated: 2022/11/28 18:04:43 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/04/25 17:06:58 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,9 @@ char	*unsigned_type(t_arg *arg)
 		else
 			conv_out = u_integer(nb);
 		precision_part = get_precision(arg->precision, conv_out);
-		output = ft_strnjoin(output, precision_part, ft_strlen(precision_part));
-		output = ft_strnjoin(output, conv_out, ft_strlen(conv_out));
+		output = ft_strnjoin_free(output, precision_part,
+				ft_strlen(precision_part));
+		output = ft_strnjoin_free(output, conv_out, ft_strlen(conv_out));
 		free(precision_part);
 		free(conv_out);
 	}

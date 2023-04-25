@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:43:58 by rbroque           #+#    #+#             */
-/*   Updated: 2023/01/28 14:39:01 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/04/25 17:07:21 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,9 @@ char	*hex_type(t_arg *arg, unsigned long nb)
 		add_flag(&arg->flags, PREFIX_FLAG);
 	conv_out = converters[type_index](nb);
 	precision_part = get_precision(arg->precision, conv_out);
-	output = ft_strnjoin(output, precision_part, ft_strlen(precision_part));
-	output = ft_strnjoin(output, conv_out, ft_strlen(conv_out));
+	output = ft_strnjoin_free(output, precision_part,
+			ft_strlen(precision_part));
+	output = ft_strnjoin_free(output, conv_out, ft_strlen(conv_out));
 	add_width(&output, arg);
 	free(conv_out);
 	free(precision_part);

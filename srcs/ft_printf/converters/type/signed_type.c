@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:43:25 by rbroque           #+#    #+#             */
-/*   Updated: 2023/01/28 14:43:58 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/04/24 22:48:11 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*signed_type(t_arg *arg)
 	if (nb != 0 || arg->precision != 0)
 	{
 		conv_out = converters[type_index](nb);
-		output = ft_strnjoin(get_precision(arg->precision, conv_out),
+		output = ft_strnjoin_free(get_precision(arg->precision, conv_out),
 				conv_out, ft_strlen(conv_out));
 		arg->size = ft_strlen(output)
 			+ ((arg->flags & PLUS_FLAG)

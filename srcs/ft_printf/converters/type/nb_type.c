@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:35:26 by rbroque           #+#    #+#             */
-/*   Updated: 2023/01/28 15:05:25 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/04/24 22:48:05 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	add_beginning(int nb, char **output, t_arg *arg)
 
 static void	apply_nb_flag(t_arg *arg, char **output, const char *conv_out)
 {
-	*output = ft_strnjoin(*output, conv_out, ft_strlen(conv_out));
+	*output = ft_strnjoin_free(*output, conv_out, ft_strlen(conv_out));
 	if (arg->flags & PREFIX_FLAG)
 	{
 		prefix_add(PREFIX_HEX, output);

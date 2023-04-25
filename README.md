@@ -140,6 +140,11 @@ A C-library of usual functions
 
 #### [`ft_strnjoin`](srcs/strings/ft_strnjoin.c)
 > Allocates (with malloc(3)) and returns a concatenation of two strings.
+> If a string is NULL, it will be treated as empty string
+> Returns NULL if allocation fails.
+
+#### [`ft_strnjoin_free`](srcs/strings/ft_strnjoin_free.c)
+> Allocates (with malloc(3)) and returns a concatenation of two strings.
 > The first string is freed.
 > If a string is NULL, it will be treated as empty string
 > Returns NULL if allocation fails.
