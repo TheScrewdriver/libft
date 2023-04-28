@@ -132,6 +132,12 @@ A C-library of usual functions
 > the concatenation of two strings.
 > Returns NULL if allocation fails.
 
+#### [`ft_strjoin_free`](srcs/strings/ft_strjoin_free.c)
+> Allocates (with malloc(3)) and returns a new string resulting from
+> The first string is freed
+> the concatenation of two strings.
+> Returns NULL if allocation fails.
+
 #### [`ft_strmapi`](srcs/strings/ft_strmapi.c)
 > Allocates (with malloc(3)) and returns a duplicate string each character
 > of which has been modified by the input function
