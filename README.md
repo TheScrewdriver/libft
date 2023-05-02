@@ -171,6 +171,9 @@ A C-library of usual functions
 #### [`get_max`](srcs/math/get_max.c)
 > Returns the biggest number between two integers.
 
+#### [`get_size_strs`](srcs/strings/get_size_strs.c)
+> Returns the size of a string array terminated by the NULL pointer.
+
 #### [`index_of`](srcs/strings/index_of.c)
 > Returns the index of the first matching character occurence.
 > If the character isn't found, it returns -1.

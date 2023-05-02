@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 12:51:40 by rbroque           #+#    #+#             */
-/*   Updated: 2023/04/28 11:26:26 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/05/01 15:54:51 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <stdbool.h>
 
 size_t	abs_index(const char *buffer, const char c);
-ssize_t	index_of(const char *str, const char c);
 char	**ft_split(char const *s, char c);
 char	**ft_split_set(char const *s, const char *charset);
 char	*ft_strchr(const char *s, int c);
@@ -43,11 +42,13 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *big, const char *little);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-bool	streq(const char *str1, const char *str2);
+size_t	get_size_strs(char **strs);
+ssize_t	index_of(const char *str, const char c);
 bool	is_in_str(const char *str, const char c);
-char	*replace_str(const char *src, const char *replace,
-			const size_t index, const size_t delete_len);
 char	*replace_str_free(char *src, const char *replace,
 			const size_t index, const size_t delete_len);
+char	*replace_str(const char *src, const char *replace,
+			const size_t index, const size_t delete_len);
+bool	streq(const char *str1, const char *str2);
 
 #endif
