@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 15:04:27 by rbroque           #+#    #+#             */
-/*   Updated: 2022/09/14 15:59:57 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/05/07 15:51:40 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *set, int c, size_t n);
+void	ft_swap(void **ptr1, void **ptr2);
 
 #endif

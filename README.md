@@ -49,6 +49,9 @@ A C-library of usual functions
 
 ### Part 2 - Additional functions
 
+#### [`ft_swap`](srcs/memory/ft_swap.c)
+> Swap two objects by taking their respective addresses as parameters.
+
 #### [`free_strs`](srcs/free/free_strs.c)
 > Free all the strings in the string array then free the array pointer.
 

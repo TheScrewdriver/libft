@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2023/05/01 15:54:09 by rbroque          ###   ########.fr        #
+#    Updated: 2023/05/07 15:47:20 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -146,6 +146,7 @@ SRCS += ft_memcmp.c
 SRCS += ft_memcpy.c
 SRCS += ft_memmove.c
 SRCS += ft_memset.c
+SRCS += ft_swap.c
 
 # output
 
