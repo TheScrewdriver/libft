@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 22:29:53 by rbroque           #+#    #+#             */
-/*   Updated: 2023/04/20 09:47:07 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/05/08 11:03:41 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_list;
 
-void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(),
-			void (*free_fct)(void *));
+void	ft_list_remove_if(t_list **head, void *ref,
+			bool (*comp)(void *, void *), void (*del)(void *));
 void	ft_lstadd_back(t_list **lst, t_list *new_lst);
 void	ft_lstadd_front(t_list **lst, t_list *new_lst);
 void	ft_lstclear(t_list **lst, void (*del)(void *));

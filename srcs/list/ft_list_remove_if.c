@@ -6,33 +6,49 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 12:30:11 by rbroque           #+#    #+#             */
-/*   Updated: 2023/04/20 09:48:25 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/05/08 11:04:45 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	delete_node(t_list **begin_list, void (*free_fct)(void *))
+static void	rm_node(
+	t_list **head,
+	t_list **curr,
+	t_list *prev,
+	void (*del)(void *)
+	)
 {
-	t_list	*tmp;
-
-	tmp = *begin_list;
-	*begin_list = (*begin_list)->next;
-	free_fct(tmp->content);
-	free(tmp);
+	if (prev == NULL)
+		*head = (*curr)->next;
+	else
+		prev->next = (*curr)->next;
+	ft_lstdelone(*curr, del);
+	*curr = *head;
+	if (prev != NULL)
+		*curr = prev->next;
 }
 
-void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(),
-			void (*free_fct)(void *))
+void	ft_list_remove_if(
+	t_list **head,
+	void *ref,
+	bool (*comp)(void *, void *),
+	void (*del)(void *)
+	)
 {
-	if (begin_list != NULL && *begin_list != NULL)
+	t_list	*curr;
+	t_list	*prev;
+
+	curr = *head;
+	prev = NULL;
+	while (curr != NULL)
 	{
-		if (cmp((*begin_list)->content, data_ref) == 0)
-		{
-			delete_node(begin_list, free_fct);
-			ft_list_remove_if(begin_list, data_ref, cmp, free_fct);
-		}
+		if (comp(curr->content, ref) == true)
+			rm_node(head, &curr, prev, del);
 		else
-			ft_list_remove_if(&((*begin_list)->next), data_ref, cmp, free_fct);
+		{
+			prev = curr;
+			curr = curr->next;
+		}
 	}
 }
