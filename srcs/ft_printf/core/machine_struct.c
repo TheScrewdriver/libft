@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/20 14:55:19 by rbroque           #+#    #+#             */
-/*   Updated: 2023/01/28 14:44:44 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/05/25 14:38:31 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,23 @@ t_machine	*init_machine(const char *str, va_list aptr, int fd)
 		new->arg = init_arg(NO_TYPE, aptr);
 		new->fd = fd;
 		new->state = E_STANDARD;
+		if (new->output == NULL || new->arg == NULL)
+		{
+			free_machine(new);
+			new = NULL;
+		}
 	}
 	return (new);
 }
 
 void	free_machine(t_machine *machine)
 {
-	free(machine->arg);
-	free(machine->output->final_str);
-	free(machine->output);
+	if (machine != NULL)
+	{
+		free(machine->arg);
+		if (machine->output != NULL)
+			free(machine->output->final_str);
+		free(machine->output);
+	}
 	free(machine);
 }

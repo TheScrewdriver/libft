@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 19:28:24 by rbroque           #+#    #+#             */
-/*   Updated: 2023/01/28 14:45:44 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/05/25 14:34:56 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	ft_vdprintf(int fd, const char *str, va_list aptr)
 	ssize_t				ret_val;
 
 	machine = init_machine(str, aptr, fd);
+	if (machine == NULL)
+		return (-1);
 	output = machine->output;
 	while (machine->state != E_END)
 		machine->input += state_function[machine->state](machine);
