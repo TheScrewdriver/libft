@@ -67,6 +67,9 @@ A C-library of usual functions
 #### [`ft_list_remove_if`](srcs/list/ft_list_remove_if.c)
 > Remove with the free_function each element of the list when its content and the data_ref match in the comp function (which returns 0 if it's the same).
 
+#### [`ft_list_remove_if_without_free`](srcs/list/ft_list_remove_without_free_if.c)
+> Remove (without free) each element of the list when its content and the data_ref match in the comp function (which returns 0 if it's the same).
+
 #### [`ft_lstadd_back`](srcs/list/ft_lstadd_back.c)
 > Adds a new element at the end of the list.
 
