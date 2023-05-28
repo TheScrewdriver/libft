@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2023/05/27 13:22:28 by rbroque          ###   ########.fr        #
+#    Updated: 2023/05/28 13:19:58 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,6 +97,7 @@ SRCS += ft_printf.c
 SRCS += ft_vdprintf.c
 SRCS += ft_dprintf.c
 SRCS += ft_getprintf.c
+SRCS += print_error.c
 
 # states/
 

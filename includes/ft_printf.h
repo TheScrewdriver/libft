@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 04:34:09 by rbroque           #+#    #+#             */
-/*   Updated: 2023/01/28 14:31:54 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/05/28 13:20:23 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,6 +113,10 @@ int			ft_dprintf(int fd, const char *str, ...);
 // ft_printf
 
 int			ft_printf(const char *str, ...);
+
+// print_error
+
+void	print_error(const char *format, ...);
 
 // machine_struct
 
