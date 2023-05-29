@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:47:45 by rbroque           #+#    #+#             */
-/*   Updated: 2023/01/31 03:19:50 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/05/29 18:25:30 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,15 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	if (lst != NULL && *lst != NULL)
+	t_list	*tmp_lst;
+
+	if (lst != NULL)
 	{
-		ft_lstclear(&(*lst)->next, del);
-		ft_lstdelone(*lst, del);
-		*lst = NULL;
+		while (*lst != NULL)
+		{
+			tmp_lst = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			*lst = tmp_lst;
+		}
 	}
 }
