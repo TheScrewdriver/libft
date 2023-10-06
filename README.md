@@ -198,6 +198,10 @@ A C-library of usual functions
 > Returns a boolean which depends if a character is present in a string.
 > Returns false if the string is NULL.
 
+#### [`is_suffix_valid`](srcs/strings/is_suffix_valid.c)
+> Returns a boolean which depends if the suffix is present in a string.
+> Not protected against NULL.
+
 #### [`replace_str`](srcs/strings/replace_str.c)
 > Allocate (with malloc(3)) and returns a duplication of src
 > but del_len characters from the input index has been deleted

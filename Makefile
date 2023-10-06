@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2023/05/28 13:19:58 by rbroque          ###   ########.fr        #
+#    Updated: 2023/10/06 09:24:10 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -188,6 +188,7 @@ SRCS += ft_substr.c
 SRCS += get_size_strs.c
 SRCS += streq.c
 SRCS += is_in_str.c
+SRCS += is_suffix_valid.c
 SRCS += replace_str_free.c
 SRCS += replace_str.c
 
