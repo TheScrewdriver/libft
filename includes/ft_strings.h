@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/02 12:51:40 by rbroque           #+#    #+#             */
-/*   Updated: 2023/10/06 09:23:35 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/10/09 07:48:42 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ char	*replace_str(const char *src, const char *replace,
 			const size_t index, const size_t delete_len);
 bool	streq(const char *str1, const char *str2);
 bool	is_suffix_valid(const char *const str, const char *const suffix);
+size_t	count_c_in_str(const char *str, const char c);
 
 #endif

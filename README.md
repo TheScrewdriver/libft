@@ -198,6 +198,10 @@ A C-library of usual functions
 > Returns a boolean which depends if a character is present in a string.
 > Returns false if the string is NULL.
 
+#### [`count_in_str`](srcs/strings/count_in_str.c)
+> Returns a size_t representing the occurence count of a character in a string.
+> Not protected against NULL.
+
 #### [`is_suffix_valid`](srcs/strings/is_suffix_valid.c)
 > Returns a boolean which depends if the suffix is present in a string.
 > Not protected against NULL.

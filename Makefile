@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2023/10/06 09:24:10 by rbroque          ###   ########.fr        #
+#    Updated: 2023/10/09 07:49:13 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -160,6 +160,7 @@ SRCS += ft_putstr_fd.c
 # strings
 
 SRCS += abs_index.c
+SRCS += count_in_str.c
 SRCS += index_of.c
 SRCS += ft_split.c
 SRCS += ft_split_set.c
