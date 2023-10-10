@@ -6,13 +6,13 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/04 16:40:19 by rbroque           #+#    #+#             */
-/*   Updated: 2023/02/06 11:32:46 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/10/10 08:25:27 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	free_strs(char **strs)
+void	free_strs(char **const strs)
 {
 	size_t	i;
 
