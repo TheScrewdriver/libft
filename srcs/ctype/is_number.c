@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_conv.h                                          :+:      :+:    :+:   */
+/*   is_number.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 21:06:20 by rbroque           #+#    #+#             */
-/*   Updated: 2023/10/13 07:08:27 by rbroque          ###   ########.fr       */
+/*   Created: 2023/10/13 07:25:23 by rbroque           #+#    #+#             */
+/*   Updated: 2023/10/13 07:28:51 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_CONV_H
-# define FT_CONV_H
+#include "libft.h"
 
-# define SPACE ' '
-# define FIRST_WHITESPACE 9
-# define LAST_WHITESPACE 13
-
-int		ft_atoi(const char *str);
-int		ft_atoi_base(const char *str, char *base);
-long	ft_atol(const char *str);
-char	*ft_itoa(int n);
-bool	ft_atoi_safe(int *const nb, const char *str);
-
-#endif
+bool	is_number(const char *str)
+{
+	while (ft_isdigit(*str))
+		++str;
+	return (*str == '\0');
+}

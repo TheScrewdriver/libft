@@ -20,6 +20,7 @@ A C-library of usual functions
 ##### Functions from `<stdlib.h>` library
 
 * [`ft_atoi`](srcs/conv/ft_atoi.c)
+* [`ft_atol`](srcs/conv/ft_atol.c)
 * [`ft_calloc`](srcs/memory/ft_calloc.c)
 
 ##### Functions from `<strings.h>` library
@@ -214,3 +215,10 @@ A C-library of usual functions
 
 #### [`replace_str_free`](srcs/strings/replace_str_free.c)
 > Has the behavior of replace_str function but free the input string.
+
+#### [`ft_atoi_safe`](srcs/conv/ft_atoi_safe.c)
+> Takes a integer address and a string as parameters.
+> Behaves as ft_atoi except it returns a boolean depending if the number stored in the string is out of INT bounds.
+
+#### [`is_number`](srcs/ctype/is_number.c)
+> Returns true if the entire input string only contains digits. Else, returns false.
