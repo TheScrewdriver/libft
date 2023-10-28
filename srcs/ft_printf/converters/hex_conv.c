@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 15:26:06 by rbroque           #+#    #+#             */
-/*   Updated: 2023/10/29 01:14:16 by romannbroque     ###   ########.fr       */
+/*   Updated: 2023/10/28 23:42:41 by rbroque          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ char	*up_hex(unsigned long nb)
 
 char	*address(unsigned long address_value)
 {
-	void	*address = (void *)address_value;
-	char	*output;
+	void *const	address = (void *)address_value;
+	char		*output;
 
 	if (address == NULL)
 		output = ft_strdup(NIL_DEF);
