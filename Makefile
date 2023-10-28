@@ -17,7 +17,7 @@
 ifeq ($(shell uname -s),Darwin)
 	SHELL = /bin/bash
 else ifeq ($(shell uname -s),Linux)
-	SHELL = usr/bin/bash
+	SHELL = /usr/bin/bash
 else
     $(error Unsupported operating system)
 endif
