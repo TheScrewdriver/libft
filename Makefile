@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2023/10/29 01:13:05 by romannbroque     ###   ########.fr        #
+#    Updated: 2023/10/29 01:16:38 by romannbroque     ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,9 @@
 ifeq ($(shell uname -s),Darwin)
 	SHELL = /bin/bash
 else ifeq ($(shell uname -s),Linux)
-	SHELL = /bin/bash
+	SHELL = usr/bin/bash
+else
+    $(error Unsupported operating system)
 endif
 
 ##############
