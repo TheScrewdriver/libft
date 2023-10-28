@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:43:58 by rbroque           #+#    #+#             */
-/*   Updated: 2023/04/25 17:07:21 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/10/29 01:07:39 by romannbroque     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 char	*hex_type(t_arg *arg, unsigned long nb)
 {
-	static char		*(*converters[])() = {low_hex, up_hex, address};
+	static char		*(*converters[])(unsigned long)
+		= {low_hex, up_hex, address};
 	const ssize_t	type_index = (arg->type > LOW_TYPE) + (arg->type > UP_TYPE);
 	char			*conv_out;
 	char			*output;

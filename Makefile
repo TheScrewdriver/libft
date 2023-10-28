@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2023/10/13 07:26:51 by rbroque          ###   ########.fr        #
+#    Updated: 2023/10/29 01:13:05 by romannbroque     ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,11 @@
 #### ENV ####
 #############
 
-SHELL = /usr/bin/bash
+ifeq ($(shell uname -s),Darwin)
+	SHELL = /bin/bash
+else ifeq ($(shell uname -s),Linux)
+	SHELL = /bin/bash
+endif
 
 ##############
 #### NAME ####

@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 15:12:42 by rbroque           #+#    #+#             */
-/*   Updated: 2023/04/24 22:48:28 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/10/29 01:05:33 by romannbroque     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static t_line_status	fill_line_from_file(char **line,
 
 static void	get_line(int fd, char **line)
 {
-	static char		rest[OPEN_MAX][BUFFER_SIZE + 1] = {{0}};
+	static char		rest[OPEN_MAX_FD][BUFFER_SIZE + 1] = {{0}};
 
 	if (get_line_from_buff(line, rest[fd]) == INVALID_LINE)
 		fill_line_from_file(line, rest[fd], fd);

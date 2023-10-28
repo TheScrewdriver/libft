@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 14:45:01 by rbroque           #+#    #+#             */
-/*   Updated: 2022/11/28 17:45:08 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/10/29 01:05:58 by romannbroque     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*char_type(t_arg *arg)
 {
-	static char		*(*converters[])() = {character, string, percentage};
+	static char		*(*converters[])(t_arg *) = {character, string, percentage};
 	size_t			type_index;
 	char			*output;
 

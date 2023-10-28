@@ -6,7 +6,7 @@
 /*   By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 04:34:09 by rbroque           #+#    #+#             */
-/*   Updated: 2023/05/28 13:23:23 by rbroque          ###   ########.fr       */
+/*   Updated: 2023/10/29 01:09:15 by romannbroque     ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,9 +138,9 @@ char		*percentage(t_arg *arg);
 char		*integer_d(int nb);
 char		*integer_i(int nb);
 char		*u_integer(unsigned long nb);
-char		*low_hex(unsigned int nb);
-char		*up_hex(unsigned int nb);
-char		*address(void *address);
+char		*low_hex(unsigned long nb);
+char		*up_hex(unsigned long nb);
+char		*address(unsigned long address);
 
 // states
 
