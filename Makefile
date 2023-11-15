@@ -6,7 +6,7 @@
 #    By: rbroque <rbroque@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/31 10:15:13 by rbroque           #+#    #+#              #
-#    Updated: 2023/10/29 01:16:38 by romannbroque     ###   ########.fr        #
+#    Updated: 2023/11/15 09:34:17 by rbroque          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -232,6 +232,10 @@ endif
 
 ifeq ($(everything), true)
 	CFLAGS += -Weverything
+endif
+
+ifeq ($(profiler), true)
+	CFLAGS += -pg
 endif
 
 #################
